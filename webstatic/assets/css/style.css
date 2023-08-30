@@ -1,52 +1,60 @@
 :root {
-    --sz-blue: #3498db;
+  --sz-blue: #3498db;
 }
 
 /* Buttons */
 .btn-default {
-    color: #ffffff !important;
-    background-color: var(--sz-blue) !important;
+  color: #ffffff !important;
+  background-color: var(--sz-blue) !important;
 }
 
 /* Typography */
 .text-bold {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
 .text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 .blue-text {
-    color: var(--sz-blue);
+  color: var(--sz-blue);
 }
 .nav-link.active {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 .nav-link {
-    font-weight: 499 !important;
-    padding-inline: 15px !important;
+  font-weight: 499 !important;
+  padding-inline: 15px !important;
 }
 .jumbotron p {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* Background */
 .bg-trans {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 .email-box {
-    background-color: rgb(233, 233, 233) !important;
-    /* outline: 2px solid var(--sz-blue); */
-    /* border: 2px solid var(--sz-blue); */
+  background-color: rgb(233, 233, 233) !important;
+  /* outline: 2px solid var(--sz-blue); */
+  /* border: 2px solid var(--sz-blue); */
 }
 .email-box:hover {
-    background-color: rgb(233, 233, 233) !important;
-    outline: 2px solid var(--sz-blue) !important;
-    border: 2px solid var(--sz-blue) !important;
+  background-color: rgb(233, 233, 233) !important;
+  outline: 2px solid var(--sz-blue) !important;
+  border: 2px solid var(--sz-blue) !important;
 }
 
-
-
-
 .wrap {
-    max-width: 500px !important;
+  max-width: 500px !important;
+}
+
+.p-2 > .p-4 {
+  background-color: #f9f9f9;
+}
+/* .p-2 > .p-4:hover {
+  background-color: var(--sz-blue) !important;
+  color: #fff !important;
+} */
+.p-4 > .fas {
+    font-size: 24px !important;
 }
