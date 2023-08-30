@@ -1,0 +1,29 @@
+:root {
+    --sz-blue: #3498db;
+}
+
+/* Buttons */
+.btn-default {
+    color: #ffffff !important;
+    background-color: var(--sz-blue) !important;
+}
+
+/* Typography */
+.text-bold {
+    font-weight: bold !important;
+}
+.text-justify {
+    text-align: justify;
+}
+.nav-link.active {
+    font-weight: 600 !important;
+}
+.nav-link {
+    font-weight: 499 !important;
+    padding-inline: 15px !important;
+}
+
+/* Background */
+.bg-trans {
+    background-color: transparent !important;
+}
