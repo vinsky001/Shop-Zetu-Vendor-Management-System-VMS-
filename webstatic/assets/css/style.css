@@ -1,11 +1,16 @@
 :root {
   --sz-blue: #3498db;
+  --sz-grey: #f9f9f9;
 }
 
 /* Buttons */
 .btn-default {
   color: #ffffff !important;
   background-color: var(--sz-blue) !important;
+}
+.btn-white {
+  color: var(--sz-blue) !important;
+  background-color: #ffffff !important;
 }
 
 /* Typography */
@@ -46,10 +51,10 @@
 
 /* Spacing */
 .p {
-    padding-top: 141px !important;
-    padding-right: 1rem !important;
-    padding-bottom: 1rem !important;
-    padding-left: 1rem !important;
+  padding-top: 141px !important;
+  padding-right: 1rem !important;
+  padding-bottom: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 .wrap {
@@ -57,25 +62,33 @@
 }
 
 .p-2 > .p-4 {
-  background-color: #f9f9f9;
+  background-color: var(--sz-grey);
 }
 /* .p-2 > .p-4:hover {
   background-color: var(--sz-blue) !important;
   color: #fff !important;
 } */
 .fas {
-    font-size: 24px !important;
+  font-size: 24px !important;
 }
 
 ol.how-it-works {
-    font-size: 32px;
-    font-weight: 600 !important;
+  font-size: 32px;
+  font-weight: 600 !important;
 }
 ol.how-it-works li {
-    margin-top: 0 !important;
-    padding-left: 32px !important;
-    margin-bottom: 64px !important;
+  margin-top: 0 !important;
+  padding-left: 32px !important;
+  margin-bottom: 64px !important;
 }
 ol.how-it-works li::marker {
-    color: var(--sz-blue) !important;
+  color: var(--sz-blue) !important;
+}
+ul.pricing li {
+  list-style-type: none;
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+}
+.mb-120 {
+  margin-bottom: 120px !important;
 }
