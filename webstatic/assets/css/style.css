@@ -1,6 +1,8 @@
 :root {
-  --sz-blue: #3498db;
   --sz-grey: #f9f9f9;
+  --sz-blue: #3498db;
+  --sz-grey: #ffffff;
+  /* --sz-grey: darkgrey; */
 }
 
 /* Buttons */
@@ -91,4 +93,8 @@ ul.pricing li {
 }
 .mb-120 {
   margin-bottom: 120px !important;
+}
+.basic .fas,
+.premium .fas {
+  color: var(--sz-blue);
 }
