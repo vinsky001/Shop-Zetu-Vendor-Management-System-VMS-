@@ -44,6 +44,14 @@
   border: 2px solid var(--sz-blue) !important;
 }
 
+/* Spacing */
+.p {
+    padding-top: 141px !important;
+    padding-right: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+}
+
 .wrap {
   max-width: 500px !important;
 }
@@ -55,6 +63,19 @@
   background-color: var(--sz-blue) !important;
   color: #fff !important;
 } */
-.p-4 > .fas {
+.fas {
     font-size: 24px !important;
+}
+
+ol.how-it-works {
+    font-size: 32px;
+    font-weight: 600 !important;
+}
+ol.how-it-works li {
+    margin-top: 0 !important;
+    padding-left: 32px !important;
+    margin-bottom: 64px !important;
+}
+ol.how-it-works li::marker {
+    color: var(--sz-blue) !important;
 }
