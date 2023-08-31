@@ -3,6 +3,11 @@
   --sz-blue: #3498db;
   /* --sz-grey: #ffffff; #cccccc */
   /* --sz-grey: darkgrey; */
+  --font-poppins: "Poppins", sans-serif;
+}
+
+* {
+    font-family: var(--font-poppins);
 }
 
 /* Buttons */
@@ -105,27 +110,27 @@ ul.pricing li {
 }
 
 .form-1 {
-    background-color: var(--sz-grey) !important;
+  background-color: var(--sz-grey) !important;
 }
 .form-1 label {
-    font-size: 24px;
-    margin-bottom: 12px !important;
+  font-size: 24px;
+  margin-bottom: 12px !important;
 }
 .form-1 input {
-    margin-bottom: 32px !important;
+  margin-bottom: 32px !important;
 }
 
 footer.footer {
-    color: var(--sz-grey) !important;
-    background-color: var(--sz-blue);
+  color: var(--sz-grey) !important;
+  background-color: var(--sz-blue);
 }
 
 .footer a {
-    color: var(--sz-grey) !important;
-    text-decoration: none !important;
+  color: var(--sz-grey) !important;
+  text-decoration: none !important;
 }
 
 .footer a:hover {
-    color: var(--sz-grey) !important;
-    text-decoration: underline !important;
+  color: var(--sz-grey) !important;
+  text-decoration: underline !important;
 }
