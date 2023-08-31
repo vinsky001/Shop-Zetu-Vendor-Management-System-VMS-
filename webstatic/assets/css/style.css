@@ -1,7 +1,7 @@
 :root {
   --sz-grey: #f9f9f9;
   --sz-blue: #3498db;
-  --sz-grey: #ffffff;
+  /* --sz-grey: #ffffff; #cccccc */
   /* --sz-grey: darkgrey; */
 }
 
@@ -104,8 +104,15 @@ ul.pricing li {
   color: var(--sz-blue);
 }
 
-form.contact {
-    background-color: var(--sz-grey);
+.form-1 {
+    background-color: var(--sz-grey) !important;
+}
+.form-1 label {
+    font-size: 24px;
+    margin-bottom: 12px !important;
+}
+.form-1 input {
+    margin-bottom: 32px !important;
 }
 
 footer.footer {
