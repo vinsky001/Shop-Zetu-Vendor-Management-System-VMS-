@@ -88,13 +88,22 @@ ol.how-it-works li::marker {
 }
 ul.pricing li {
   list-style-type: none;
-  margin-top: 0 !important;
-  margin-bottom: 22px !important;
+  font-size: 18px;
+  margin-top: 32px !important;
+  margin-bottom: 32px !important;
 }
 .mb-120 {
+  font-size: 18px;
   margin-bottom: 120px !important;
+}
+.mb-120 > .text-bold {
+  font-size: 20px;
 }
 .basic .fas,
 .premium .fas {
   color: var(--sz-blue);
+}
+
+form.contact {
+    background-color: var(--sz-grey);
 }

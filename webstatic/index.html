@@ -18,9 +18,9 @@
   </head>
   <body>
     <!-- Body -->
-    <div class="container-fluid main">
+    <main class="container-fluid main">
       <!-- welcome -->
-      <section class="welcome d-flex flex-column">
+      <header class="welcome d-flex flex-column">
         <!-- Header -->
         <div class="header flex-grow-0">
           <nav class="navbar navbar-expand-lg">
@@ -110,7 +110,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </header>
       <!-- Powerful Features -->
       <section class="container-fluid p">
         <h1 class="text-center py-4">
@@ -167,7 +167,7 @@
         </div>
       </section>
       <!-- How It Works? -->
-      <section class="container-flui p">
+      <section class="container-fluid p">
         <h1 class="text-center py-4">How it Works?</h1>
         <div class="container">
           <div class="row">
@@ -269,7 +269,7 @@
             >
               <h3>Professional Plan</h3>
               <p>Features:</p>
-              <ul class="pricing professionalp-0">
+              <ul class="pricing professional p-0">
                 <li>
                   <i class="fas fa-circle-check"></i>&nbsp;All Basic Plan
                   Features
@@ -328,7 +328,61 @@
           </div>
         </div>
       </section>
-    </div>
+      <!-- Contact -->
+      <section class="container-fluid p contact">
+        <div class="row container mx-auto">
+          <div class="col-12 col-md-6">
+            <h1 class="text-center">Contact Us</h1>
+            <form class="contact w-80" aria-describedby="formInfo">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="enter name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="enter email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  row="7"
+                  class="form-control"
+                  id="message"
+                  placeholder="enter message"
+                ></textarea>
+              </div>
+              <div id="formInfo" class="form-text mb-2">
+                <small>
+                  We'll never share your information with anyone else.
+                </small>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-md-6">
+            <i class="fas fa-star-of-life blue-text"></i>
+            <img
+              alt="..."
+              class="img-fluid"
+              src="https://via.placeholder.com/430x645"
+            />
+            <i class="flex-start fas fa-star-of-life blue-text"></i>
+          </div>
+        </div>
+      </section>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
