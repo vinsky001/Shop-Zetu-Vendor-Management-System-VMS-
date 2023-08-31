@@ -107,3 +107,18 @@ ul.pricing li {
 form.contact {
     background-color: var(--sz-grey);
 }
+
+footer.footer {
+    color: var(--sz-grey) !important;
+    background-color: var(--sz-blue);
+}
+
+.footer a {
+    color: var(--sz-grey) !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: var(--sz-grey) !important;
+    text-decoration: underline !important;
+}
