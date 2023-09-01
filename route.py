@@ -41,21 +41,36 @@ class Join_as_vendor(FlaskForm):
         #if there is a similar username:
         if existing_user_username:
             raise ValidationError(
-                'That username already exists. Please choose a different one.')                    
+                'That username already exists. Please choose a different one.') 
+            
+          
+#routes to a Vendor dashboard after login            
+@app.route('/dashboard', methods=['GET', 'POST'])
+@login_required
+def dashboard():
+    return render_template('dashboard.html')
 
+#routes pages to log-in page when a vendor gets loged out
+@app.route('/logout', methods=['GET', 'POST'])
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
+                               
+#routes to home page
 app.route('/')
 def home():
-    return render_template()
+    return render_template('home.html')
 
-
+#routes page to login page
 app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template()
+    return render_template('login.html')
 
-
+#routes to sign-up for new vendors
 app.route('/Join as Vendor', methods=['GET', 'POST'])
 def Join_as_vendor():
-    return render_template()
+    return render_template('')
     
 if __name__ == '__main__':
     app.run(debug=True)
