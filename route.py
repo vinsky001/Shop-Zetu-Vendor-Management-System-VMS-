@@ -27,27 +27,6 @@ class User(db.Model, UserMixin):
     brand = db.Column(db.String(20), nullable=False, unique=True)
     #password to have a max of 80 characters
     password = db.Column(db.String(80), nullable=False)
-    
-    
- 
- #This class inherits from FlaskForm                         
-class Join_as_vendor(FlaskForm):
-    username = String(validators=[
-                    InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "username"})
-    
-    password = PasswordField(validators=[
-                             InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
-    
-    submit = SubmitField("Register")
-    
-    #Validates username inputs by checking the database
-    def  validate_username(self, username):
-        existing_user_username = User.query.filter_by(
-            username=username.data).first()
-        #if there is a similar username:
-        if existing_user_username:
-            raise ValidationError(
-                'That username already exists. Please choose a different one.') 
             
           
 #routes to a Vendor dashboard after login            
