@@ -17,6 +17,8 @@ app.config['SECRET_KEY'] = '18f3e4d01227bda3eabd490c'
 
 #creates an instance of the database
 db = SQLAlchemy(app)
+#creates an instance of bcrypt
+bcrypt = Bcrypt(app)
 
 #Let's create database table
 class User(db.Model, UserMixin):
@@ -27,6 +29,14 @@ class User(db.Model, UserMixin):
     brand = db.Column(db.String(20), nullable=False, unique=True)
     #password to have a max of 80 characters
     password = db.Column(db.String(80), nullable=False)
+    
+    @property
+    def password(self):
+        return self.password
+    
+    @password_setter
+    def password(self, plain_text_password):
+        self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8 ')
             
           
 #routes to a Vendor dashboard after login            
@@ -50,7 +60,8 @@ def home():
 #routes page to login page
 app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    form = LoginForm()    
+    return render_template('login.html', form=form)
 
 #routes to sign-up for new vendors
 app.route('/Join as Vendor', methods=['GET', 'POST'])
