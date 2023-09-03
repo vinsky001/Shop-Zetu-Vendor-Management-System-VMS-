@@ -36,7 +36,7 @@ class User(db.Model, UserMixin):
     
     @password_setter
     def password(self, plain_text_password):
-        self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8 ')
+        self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
             
           
 #routes to a Vendor dashboard after login            
