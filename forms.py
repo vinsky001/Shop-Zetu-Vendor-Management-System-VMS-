@@ -36,7 +36,7 @@ class Join_as_Vendor(FlaskForm):
     Submit = SubmitField(label="Create Account")
     
     
-    
+ #user/vendor sign-in   
 class LoginForm(FlaskForm):
     username = StringField(label='Username', validators=[DataRequired()])
     password = PasswordField(label='Password', validators=[DataRequired()])
