@@ -66,12 +66,7 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-#routes pages to log-in page when a vendor gets loged out
-@app.route('/logout', methods=['GET', 'POST'])
-#@login_required
-def logout():
-        logout_user()
-        return redirect(url_for('home_page'))    
+  
 #routes to home page
 app.route('/')
 def home():
