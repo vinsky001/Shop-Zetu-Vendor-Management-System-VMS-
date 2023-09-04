@@ -100,6 +100,7 @@ def login():
 #@login_required
 def logout():
         logout_user()
+        flash("You have been logged out!", category='info')
         return redirect(url_for('home_page'))
 
 #routes to sign-up for new vendors
