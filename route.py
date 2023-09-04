@@ -65,13 +65,13 @@ with app.app_context():
 def dashboard():
     return render_template('dashboard.html')
 
+
 #routes pages to log-in page when a vendor gets loged out
 @app.route('/logout', methods=['GET', 'POST'])
 #@login_required
 def logout():
         logout_user()
-        return redirect(url_for('login'))
-                               
+        return redirect(url_for('home_page'))    
 #routes to home page
 app.route('/')
 def home():
@@ -83,7 +83,7 @@ def login():
     form = LoginForm()
     #lets catch some errors that may arise while signing in
     if form.Validate_on_submit():
-        attempted_user = User.query.get(form.username.data).first()
+        attempted_user = User.query.filter_by(username=form.username.data).first()
         if attempted_user and attempted_user.check_password_correction(
             attempted_password=form.password.data
         ):
@@ -94,6 +94,13 @@ def login():
             flash('Username and password are not match! Please try again', category='danger')
          
     return render_template('login.html', form=form)
+
+#routes pages to log-in page when a vendor gets loged out
+@app.route('/logout', methods=['GET', 'POST'])
+#@login_required
+def logout():
+        logout_user()
+        return redirect(url_for('home_page'))
 
 #routes to sign-up for new vendors
 app.route('/Join as Vendor', methods=['GET', 'POST'])
