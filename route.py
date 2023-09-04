@@ -7,7 +7,8 @@ from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
 from forms import Join_as_Vendor
 from forms import LoginForm
-from instance import db
+from functools import wraps
+#from instance import db
 
 
 
@@ -21,6 +22,13 @@ db = SQLAlchemy(app)
 #creates an instance of bcrypt
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
+
+def password_setter(func):
+    @wraps(func)
+    def wrapper(self, plain_text_password):
+        self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
+        return func(self, plain_text_password)
+    return wrapper
 
 #Let's create database table
 class User(db.Model, UserMixin):
@@ -39,19 +47,19 @@ class User(db.Model, UserMixin):
     @password_setter
     def password(self, plain_text_password):
         self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
-    
+
     def check_password_correction(self, attempted_password):
         return bcrypt.check_password_hash(self.password_harsh, attempted_password)        
           
 #routes to a Vendor dashboard after login            
 @app.route('/dashboard', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def dashboard():
     return render_template('dashboard.html')
 
 #routes pages to log-in page when a vendor gets loged out
 @app.route('/logout', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def logout():
         logout_user()
         return redirect(url_for('login'))
