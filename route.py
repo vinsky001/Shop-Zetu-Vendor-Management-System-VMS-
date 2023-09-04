@@ -32,6 +32,8 @@ def password_setter(func):
 
 #Let's create database table
 class User(db.Model, UserMixin):
+    __tablename__ = 'users'
+    
     id = db.Column(db.Integer, primary_key=True)
     #Username to have a maximum of 20 characters
     username = db.Column(db.String(20), nullable=False, unique=True)
@@ -40,6 +42,7 @@ class User(db.Model, UserMixin):
     #password to have a max of 80 characters
     password = db.Column(db.String(80), nullable=False)
     
+   
     @property
     def password(self):
         return self.password
@@ -49,7 +52,12 @@ class User(db.Model, UserMixin):
         self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
 
     def check_password_correction(self, attempted_password):
-        return bcrypt.check_password_hash(self.password_harsh, attempted_password)        
+        return bcrypt.check_password_hash(self.password_harsh, attempted_password)
+    
+with app.app_context():
+    db.create_all()
+    db.session.commit()     
+            
           
 #routes to a Vendor dashboard after login            
 @app.route('/dashboard', methods=['GET', 'POST'])
