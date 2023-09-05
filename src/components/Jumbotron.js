@@ -42,7 +42,7 @@ export default function Jumbotron() {
           <i class="fas fa-star-of-life blue-text"></i>
           <img
             alt="..."
-            class="img-fluid"
+            class="img-fluid sz-img"
             src="https://via.placeholder.com/430x645"
           />
           <i class="flex-start fas fa-star-of-life blue-text"></i>

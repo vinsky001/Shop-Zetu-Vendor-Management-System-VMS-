@@ -59,6 +59,11 @@
   padding-left: 1rem !important;
 }
 
+/* Images */
+.sz-img {
+  border-radius: 35px !important;
+}
+
 .wrap {
   max-width: 500px !important;
 }
