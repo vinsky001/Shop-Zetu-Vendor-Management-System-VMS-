@@ -1,3 +1,5 @@
+import valeria_odnovol from "../assets/images/valeria-odnovol.jpg";
+
 export default function HowItWorks() {
   return (
     <section class="container-fluid p">
@@ -7,9 +9,9 @@ export default function HowItWorks() {
           <div class="col-12 col-md-6">
             <i class="fas fa-star-of-life blue-text"></i>
             <img
-              alt="..."
+              alt="Valeria Odnovol"
               class="img-fluid sz-img"
-              src="https://via.placeholder.com/430x645"
+              src={valeria_odnovol}
             />
             <i class="flex-start fas fa-star-of-life blue-text"></i>
           </div>

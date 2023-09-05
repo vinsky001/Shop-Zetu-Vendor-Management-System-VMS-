@@ -3,6 +3,11 @@
   --sz-blue: #3498db;
   /* --sz-grey: #ffffff; #cccccc */
   /* --sz-grey: darkgrey; */
+  --font-poppins: "Poppins", sans-serif;
+}
+
+* {
+  font-family: var(--font-poppins);
 }
 
 /* Buttons */
