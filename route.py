@@ -32,6 +32,8 @@ def password_setter(func):
 
 #Let's create database table
 class User(db.Model, UserMixin):
+    __tablename__ = 'users'
+    
     id = db.Column(db.Integer, primary_key=True)
     #Username to have a maximum of 20 characters
     username = db.Column(db.String(20), nullable=False, unique=True)
@@ -40,6 +42,7 @@ class User(db.Model, UserMixin):
     #password to have a max of 80 characters
     password = db.Column(db.String(80), nullable=False)
     
+   
     @property
     def password(self):
         return self.password
@@ -49,7 +52,12 @@ class User(db.Model, UserMixin):
         self.password = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
 
     def check_password_correction(self, attempted_password):
-        return bcrypt.check_password_hash(self.password_harsh, attempted_password)        
+        return bcrypt.check_password_hash(self.password_harsh, attempted_password)
+    
+with app.app_context():
+    db.create_all()
+    db.session.commit()     
+            
           
 #routes to a Vendor dashboard after login            
 @app.route('/dashboard', methods=['GET', 'POST'])
@@ -57,13 +65,8 @@ class User(db.Model, UserMixin):
 def dashboard():
     return render_template('dashboard.html')
 
-#routes pages to log-in page when a vendor gets loged out
-@app.route('/logout', methods=['GET', 'POST'])
-#@login_required
-def logout():
-        logout_user()
-        return redirect(url_for('login'))
-                               
+
+  
 #routes to home page
 app.route('/')
 def home():
@@ -75,7 +78,7 @@ def login():
     form = LoginForm()
     #lets catch some errors that may arise while signing in
     if form.Validate_on_submit():
-        attempted_user = User.query.get(form.username.data).first()
+        attempted_user = User.query.filter_by(username=form.username.data).first()
         if attempted_user and attempted_user.check_password_correction(
             attempted_password=form.password.data
         ):
@@ -86,6 +89,14 @@ def login():
             flash('Username and password are not match! Please try again', category='danger')
          
     return render_template('login.html', form=form)
+
+#routes pages to log-in page when a vendor gets loged out
+@app.route('/logout', methods=['GET', 'POST'])
+#@login_required
+def logout():
+        logout_user()
+        flash("You have been logged out!", category='info')
+        return redirect(url_for('home_page'))
 
 #routes to sign-up for new vendors
 app.route('/Join as Vendor', methods=['GET', 'POST'])
