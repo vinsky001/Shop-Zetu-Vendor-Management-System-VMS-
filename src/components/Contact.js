@@ -1,3 +1,5 @@
+import andrew_neel from "../assets/images/andrew-neel.jpg";
+
 export default function Contact() {
   return (
     <section class="container-fluid p contact">
@@ -56,11 +58,7 @@ export default function Contact() {
         </div>
         <div class="col-12 col-md-6">
           <i class="fas fa-star-of-life blue-text"></i>
-          <img
-            alt="..."
-            class="img-fluid sz-img"
-            src="https://via.placeholder.com/430x645"
-          />
+          <img alt="Andrew Neel" class="img-fluid sz-img" src={andrew_neel} />
           <i class="flex-start fas fa-star-of-life blue-text"></i>
         </div>
       </div>

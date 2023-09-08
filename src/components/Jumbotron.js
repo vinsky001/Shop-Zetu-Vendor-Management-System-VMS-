@@ -1,3 +1,5 @@
+import junior_reis from "../assets/images/junior-reis.jpg";
+
 export default function Jumbotron() {
   return (
     <div class="jumbotron container flex-grow-1 h-100">
@@ -8,8 +10,7 @@ export default function Jumbotron() {
             <h1>
               Streamline <span class="blue-text">Management</span>
               <br />
-              for
-              <span class="blue-text">Vendors</span> in the Fashion
+              for&nbsp;<span class="blue-text">Vendors</span> in the Fashion
               <br />
               Industry
             </h1>
@@ -40,11 +41,7 @@ export default function Jumbotron() {
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center h-100">
           <i class="fas fa-star-of-life blue-text"></i>
-          <img
-            alt="..."
-            class="img-fluid sz-img"
-            src="https://via.placeholder.com/430x645"
-          />
+          <img alt="Junior Reis" class="img-fluid sz-img" src={junior_reis} />
           <i class="flex-start fas fa-star-of-life blue-text"></i>
         </div>
       </div>
