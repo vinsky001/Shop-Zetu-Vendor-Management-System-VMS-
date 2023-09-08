@@ -50,7 +50,7 @@ export default function Header() {
               </li>
             </ul>
             <button class="btn btn-default text-bold" type="submit">
-              Get Started
+              Sign in
             </button>
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function Jumbotron() {
               </div>
               <div class="col-4 col-md-3">
                 <button type="submit" class="btn btn-default mb-3">
-                  Get Started
+                  Contact us
                 </button>
               </div>
             </form>
