@@ -8,6 +8,7 @@ from flask_bcrypt import Bcrypt
 from forms import Join_as_Vendor
 from forms import LoginForm
 from functools import wraps
+from flask_mail import Mail, Message 
 #from instance import db
 
 
@@ -16,12 +17,20 @@ app = Flask(__name__)
 #Connects our app file to the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = '18f3e4d01227bda3eabd490c'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com.'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = 'ekibet544@gmail.com'
+app.config['MAIL_PASSWORD'] = '99icloud' 
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+
 
 #creates an instance of the database
 db = SQLAlchemy(app)
 #creates an instance of bcrypt
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
+mail = Mail(app)
 
 def password_setter(func):
     @wraps(func)
@@ -97,6 +106,27 @@ def logout():
         logout_user()
         flash("You have been logged out!", category='info')
         return redirect(url_for('home_page'))
+    
+ #contact form and send emails with Flask for support or feedback   
+@app.route('/contact', methods=['GET', 'POST']) 
+def contact():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        phone = request.form.get('phone')
+        message = request.form.get('message')
+        
+        subject = f"Mail from {name}"
+        body = f"Name: {name}\nE-mail: {email}\nPhone: {phone}\n\n\n{message}"
+        sender = mail_username
+        recipients = ['ekibet544@gmail.com']
+        # Create an email message
+        msg = Message(subject=subject, body=body, sender=sender, recipients=recipients)
+
+        mail.send(msg)              
+        return render_template('contact.html')   
+    
+    
 
 #routes to sign-up for new vendors
 app.route('/Join as Vendor', methods=['GET', 'POST'])
