@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Components } from "react";
 
 function signinform() {
     const [signIn, toggle] = React.useState(true);
