@@ -10,6 +10,7 @@ function signinform() {
                      <Components.Input type='text' placeholder='Name' />
                      <Components.Input type='email' placeholder='Email' />
                      <Components.Input type='password' placeholder='Password' />
+                     <Components.Input type='brand' placeholder='Brand'/>
                      <Components.Button>Sign Up</Components.Button>
                  </Components.Form>
              </Components.SignUpContainer>
@@ -30,7 +31,7 @@ function signinform() {
                  <Components.LeftOverlayPanel signinIn={signIn}>
                      <Components.Title>Welcome Back!</Components.Title>
                      <Components.Paragraph>
-                         To access the vendor Dashboard, please login with your personal info
+                         To access your vendor Dashboard, please login with your personal info
                      </Components.Paragraph>
                      <Components.GhostButton onClick={() => toggle(true)}>
                          Sign In
@@ -40,7 +41,7 @@ function signinform() {
                      <Components.RightOverlayPanel signinIn={signIn}>
                        <Components.Title>Hello!</Components.Title>
                        <Components.Paragraph>
-                           Enter Your personal details and start the onboarding with us
+                           Enter Your personal details and start the onboarding Process with us
                        </Components.Paragraph>
                            <Components.GhostButton onClick={() => toggle(false)}>
                                Sigin Up
