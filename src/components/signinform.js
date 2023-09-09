@@ -55,4 +55,4 @@ function signinform() {
      )
 }
 
-export default App;
+export default signinform;
