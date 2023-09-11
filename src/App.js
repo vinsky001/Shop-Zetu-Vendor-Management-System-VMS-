@@ -1,20 +1,22 @@
 import "./App.css";
-
-import Header from "./components/Header";
+// Pages
 import About from "./pages/About";
-import Contact from "./components/Contact";
 import Join_as_vendor from "./pages/Join-as-vendor";
+import Pricing from "./pages/Pricing";
 
 // Components
 import PowerfulFeatures from "./components/PowerfulFeatures";
-import WhatOurUsersSay from "./components/WhatOurUsersSay";
-import FlexiblePricing from "./components/FlexiblePrices";
+// import WhatOurUsersSay from "./components/WhatOurUsersSay";
+// import FlexiblePricing from "./components/FlexiblePrices";
 import HowItWorks from "./components/HowItWorks";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Contact from "./components/Contact";
+import NotFound from "./components/NotFound";
+import signinform from './components/signinform'
 
 // Utilities
-import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
-import Pricing from "./pages/Pricing";
 
 function App() {
   // return (
@@ -41,7 +43,7 @@ function App() {
         <Route path="/join-as-vendor" Component={Join_as_vendor} />
         <Route path="/contact" Component={Contact} />
         <Route path="/pricing" Component={Pricing} />
-        <Route path="*" Component={PowerfulFeatures} />
+        <Route path="*" Component={NotFound} />
       </Routes>
       <Footer />
 
