@@ -6,7 +6,7 @@ export default function Header() {
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand text-bold" href={noRef}>
-            Shop Zetu
+            ShopZetu
           </a>
           <button
             class="navbar-toggler"
@@ -31,6 +31,11 @@ export default function Header() {
               <li class="nav-item">
                 <a class="nav-link" href={noRef}>
                   About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href={noRef}>
+                  Brands
                 </a>
               </li>
               <li class="nav-item">

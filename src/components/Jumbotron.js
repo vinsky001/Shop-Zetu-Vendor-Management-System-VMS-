@@ -15,7 +15,7 @@ export default function Jumbotron() {
               Industry
             </h1>
             <p class="text-justify">
-              Introducing Shop Zetu's Vendor Management System&nbsp;! An
+              Introducing ShopZetu's Vendor Management System&nbsp;! An
               essential tool for every vendor to help ease workflow.
             </p>
             <form class="row g-3 mx-auto">
