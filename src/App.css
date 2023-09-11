@@ -68,6 +68,9 @@
 .sz-img {
   border-radius: 35px !important;
 }
+.sz-icon {
+  margin-bottom: 40px;
+}
 
 .wrap {
   max-width: 500px !important;
