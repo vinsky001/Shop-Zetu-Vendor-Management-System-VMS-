@@ -1,11 +1,10 @@
 export default function Header() {
-  const noRef = null;
 
   return (
     <header class="header flex-grow-0">
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand text-bold" href={noRef}>
+        <div class="container">
+          <a class="navbar-brand text-bold" href="./">
             ShopZetu
           </a>
           <button
@@ -24,32 +23,32 @@ export default function Header() {
               class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto"
             >
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href={noRef}>
+                <a class="nav-link active" aria-current="page" href="./">
                   Home
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={noRef}>
+                <a class="nav-link" href="./">
                   About
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={noRef}>
+                <a class="nav-link" href="./">
                   Brands
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={noRef}>
+                <a class="nav-link" href="./">
                   Pricing
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={noRef}>
+                <a class="nav-link" href="./">
                   Join as Vendor
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={noRef}>
+                <a class="nav-link" href="./">
                   Contact Us
                 </a>
               </li>
