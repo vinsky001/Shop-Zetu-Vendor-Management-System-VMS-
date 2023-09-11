@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 export default function Header() {
   const noRef = null;
   const logo_md_url = "https://shopzetu.com/cdn/shop/files/Logo_for_white_Background_100x.png?v=1672727778"
+  const about_url = "https://shopzetu.com/pages/about-us"
+
 
   return (
     <header class="header flex-grow-0">
@@ -36,9 +38,9 @@ export default function Header() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link to={"/about"} class="nav-link">
+                <a target="_blank" rel="noreferrer" href={about_url} class="nav-link">
                   About
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
                 <Link to={'/pricing'} class="nav-link">
