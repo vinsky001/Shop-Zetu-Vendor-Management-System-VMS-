@@ -28,7 +28,7 @@ export default function Header() {
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href={noRef}>
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href={noRef}>
