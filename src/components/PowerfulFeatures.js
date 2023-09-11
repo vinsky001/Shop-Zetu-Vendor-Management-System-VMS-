@@ -1,7 +1,16 @@
+import Jumbotron from "../components/Jumbotron";
+import WhatOurUsersSay from "../components/WhatOurUsersSay";
+import FlexiblePricing from "../components/FlexiblePrices";
+import HowItWorks from "../components/HowItWorks";
+import Contact from "./Contact";
+import "../Animation.css"
+
 export default function PowerfulFeatures() {
+
   return (
     <section class="container-fluid p">
-      <h1 class="text-center py-4">
+      <Jumbotron/>
+      <h1 class="text-center py-4 mt-12">
         Powerful Features to Boost Your Efficiency
       </h1>
       <div class="container">
@@ -77,6 +86,11 @@ export default function PowerfulFeatures() {
           </div>
         </div>
       </div>
+      <FlexiblePricing/>
+      <HowItWorks/>
+      <WhatOurUsersSay/>
+      <Contact/>
+
     </section>
   );
 }

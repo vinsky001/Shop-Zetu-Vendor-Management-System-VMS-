@@ -6,7 +6,7 @@ export default function Jumbotron() {
       <div class="row h-100 align-items-center">
         <div class="col-12 col-md-6">
           <div class="wrap">
-            <i class="fas fa-star-of-life blue-text"></i>
+            {/* <i class="fas fa-star-of-life blue-text"></i> */}
             <h1>
               Streamline <span class="blue-text">Management</span>
               <br />
@@ -32,7 +32,7 @@ export default function Jumbotron() {
                 />
               </div>
               <div class="col-4 col-md-3">
-                <button type="submit" class="btn btn-default mb-3">
+                <button type="submit" id="contact-btn" class="btn btn-default mb-3 w-10">
                   Contact us
                 </button>
               </div>
@@ -40,9 +40,9 @@ export default function Jumbotron() {
           </div>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center h-100">
-          <i class="fas fa-star-of-life blue-text"></i>
+          {/* <i class="fas fa-star-of-life blue-text"></i> */}
           <img alt="Junior Reis" class="img-fluid sz-img" src={junior_reis} />
-          <i class="flex-start fas fa-star-of-life blue-text"></i>
+          {/* <i class="flex-start fas fa-star-of-life blue-text"></i> */}
         </div>
       </div>
     </div>
