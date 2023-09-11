@@ -19,7 +19,8 @@ export default function Footer() {
               </li>
               <li class="mb-2">
                 &copy;&nbsp;
-                <script>document.write(new Date().getFullYear());</script>
+                {/* <script>document.write(new Date().getFullYear());</script> */}
+                {new Date().getFullYear()} {/* More maintainable*/}
               </li>
             </ul>
           </div>
