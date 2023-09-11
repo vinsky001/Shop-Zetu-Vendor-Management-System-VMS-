@@ -15,6 +15,7 @@
   color: #ffffff !important;
   background-color: var(--sz-blue) !important;
 }
+
 .btn-white {
   color: var(--sz-blue) !important;
   background-color: #ffffff !important;
@@ -24,19 +25,30 @@
 .text-bold {
   font-weight: bold !important;
 }
+
 .text-justify {
   text-align: justify;
 }
+
 .blue-text {
   color: var(--sz-blue);
 }
+
 .nav-link.active {
   font-weight: 600 !important;
 }
+
 .nav-link {
   font-weight: 499 !important;
   padding-inline: 15px !important;
 }
+
+.logo-md {
+  border-radius: 30px;
+  margin-right: 20px;
+  width: 50px;
+}
+
 .jumbotron p {
   font-size: 24px;
 }
@@ -45,11 +57,13 @@
 .bg-trans {
   background-color: transparent !important;
 }
+
 .email-box {
   background-color: rgb(233, 233, 233) !important;
   /* outline: 2px solid var(--sz-blue); */
   /* border: 2px solid var(--sz-blue); */
 }
+
 .email-box:hover {
   background-color: rgb(233, 233, 233) !important;
   outline: 2px solid var(--sz-blue) !important;
@@ -76,9 +90,10 @@
   max-width: 500px !important;
 }
 
-.p-2 > .p-4 {
+.p-2>.p-4 {
   background-color: var(--sz-grey);
 }
+
 /* .p-2 > .p-4:hover {
   background-color: var(--sz-blue) !important;
   color: #fff !important;
@@ -91,27 +106,33 @@ ol.how-it-works {
   font-size: 32px;
   font-weight: 600 !important;
 }
+
 ol.how-it-works li {
   margin-top: 0 !important;
   padding-left: 32px !important;
   margin-bottom: 64px !important;
 }
+
 ol.how-it-works li::marker {
   color: var(--sz-blue) !important;
 }
+
 ul.pricing li {
   list-style-type: none;
   font-size: 18px;
   margin-top: 32px !important;
   margin-bottom: 32px !important;
 }
+
 .mb-120 {
   font-size: 18px;
   margin-bottom: 120px !important;
 }
-.mb-120 > .text-bold {
+
+.mb-120>.text-bold {
   font-size: 20px;
 }
+
 .basic .fas,
 .premium .fas {
   color: var(--sz-blue);
@@ -120,13 +141,16 @@ ul.pricing li {
 .form-1 {
   background-color: var(--sz-grey) !important;
 }
+
 .form-1 label {
   font-size: 24px;
   margin-bottom: 12px !important;
 }
+
 .form-1 input {
   margin-bottom: 32px !important;
 }
+
 
 footer.footer {
   color: var(--sz-grey) !important;
