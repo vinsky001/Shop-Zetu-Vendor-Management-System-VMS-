@@ -5,6 +5,14 @@ import HowItWorks from "../components/HowItWorks";
 import Contact from "./Contact";
 import "../Animation.css"
 
+import cloud from "../assets/svgs/cloud_upload.svg";
+import cart from "../assets/svgs/shopping_cart.svg";
+import diversity from "../assets/svgs/diversity.svg";
+import frame from "../assets/svgs/frame_impact.svg";
+import monitoring from "../assets/svgs/monitoring.svg";
+import payments from "../assets/svgs/payments.svg";
+
+
 export default function PowerfulFeatures() {
 
   return (
@@ -17,7 +25,7 @@ export default function PowerfulFeatures() {
         <div class="row">
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-cloud-arrow-up blue-text mb-3"></i>
+              <img src={cloud} alt="Cloud" className="mb-3" />
               <h4>
                 Vendor Database
                 <br />
@@ -28,7 +36,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-cart-arrow-down blue-text mb-3"></i>
+            <img src={cart} alt="Shopping Cart" className="mb-3" />
               <h4>
                 Order and Inventory
                 <br />
@@ -39,7 +47,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-users blue-text mb-3"></i>
+            <img src={diversity} alt="Users" className="mb-3" />
               <h4>
                 Collaborative Product
                 <br />
@@ -53,7 +61,7 @@ export default function PowerfulFeatures() {
         <div class="row">
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-magnifying-glass blue-text mb-3"></i>
+            <img src={frame} alt="Search" className="mb-3" />
               <h4>
                 Quality Control and
                 <br />
@@ -64,7 +72,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-chart-line blue-text mb-3"></i>
+            <img src={monitoring} alt="Charts" className="mb-3" />
               <h4>
                 Real Performance
                 <br />
@@ -75,7 +83,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-              <i class="fas fa-money-bills blue-text mb-3"></i>
+            <img src={payments} alt="Payments" className="mb-3" />
               <h4>
                 Easy Finance
                 <br />
