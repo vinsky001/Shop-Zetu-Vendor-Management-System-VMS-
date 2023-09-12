@@ -7,17 +7,14 @@ export default function Jumbotron() {
       <div className="row h-100 align-items-center">
         <div className="col-12 col-md-6">
           <div className="wrap">
-            <i className="fas fa-star-of-life blue-text"></i>
+            <img className="sz-icon" src={sparkles} alt="Sparkles" />
             <h1>
-              Streamline <span className="blue-text">Management</span>
-              <br />
-              for&nbsp;<span className="blue-text">Vendors</span> in the Fashion
-              <br />
-              Industry
+              Streamline <span className="blue-text">Management</span> for{" "}
+              <span className="blue-text">Vendors</span> in the Fashion Industry
             </h1>
             <p className="">
-              Introducing ShopZetu's Vendor Management System&nbsp;! An
-              essential tool for every vendor to help ease workflow.
+              Introducing ShopZetu's Vendor Management System! An essential tool
+              for every vendor to help ease workflow.
             </p>
             <form className="row g-3 mx-auto">
               <div className="col-8 col-md-8">
@@ -32,7 +29,7 @@ export default function Jumbotron() {
                   autofocus
                 />
               </div>
-              <div className="col-4 col-md-3">
+              <div className="col-4 col-md-4">
                 <button type="submit" className="btn btn-default mb-3">
                   Contact us
                 </button>
@@ -41,9 +38,13 @@ export default function Jumbotron() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center h-100">
-          <i className="fas fa-star-of-life blue-text"></i>
-          <img alt="Junior Reis" className="img-fluid sz-img" src={junior_reis} />
-          <i className="flex-start fas fa-star-of-life blue-text"></i>
+            <img className="sz-icon left" src={sparkles} alt="Sparkles" />
+            <img
+              alt="Junior Reis"
+              className="img-fluid sz-img"
+              src={junior_reis}
+            />
+            <img className="sz-icon right" src={sparkles} alt="Sparkles" />
         </div>
       </div>
     </div>
