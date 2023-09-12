@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section class="container-fluid p contact">
       <div class="row container mx-auto">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 mb-4">
           <h1 class="text-center">Contact Us</h1>
           <form class="contact w-60" aria-describedby="formInfo">
             <div class="form-1 p-4 my-4">

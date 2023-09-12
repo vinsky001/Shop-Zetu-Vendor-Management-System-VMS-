@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./App.css";
 
 // Pages
@@ -6,16 +8,12 @@ import Join_as_vendor from "./pages/Join-as-vendor";
 import Pricing from "./pages/Pricing";
 
 // Components
-// import PowerfulFeatures from "./components/PowerfulFeatures";
-// import WhatOurUsersSay from "./components/WhatOurUsersSay";
-// import FlexiblePricing from "./components/FlexiblePrices";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import HowItWorks from "./components/HowItWorks";
 import Header from "./components/Header";
 import NotFound from "./components/NotFound";
-// import signinform from './components/signinform'
 
 // Utilities
 import { Route, Routes } from "react-router-dom";

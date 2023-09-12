@@ -120,7 +120,6 @@
 
 .how-it-works h1 {
   font-size: 32px;
-  /* font-weight: 600 !important; */
 }
 
 .how-it-works p {
@@ -174,4 +173,38 @@ footer.footer {
 .footer a:hover {
   color: var(--sz-grey) !important;
   text-decoration: underline !important;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .p {
+    padding: 70.5px 0.5rem 0.5rem !important;
+  }
+  .jumbotron {
+    padding-top: 8px !important;
+  }
+  .jumbotron p {
+    font-size: 18px;
+  }
+  .jumbotron button {
+    font: 15px !important;
+  }
+  .contact-us-submit,
+  .email-box {
+    font-size: 15px !important;
+  }
+  .sz-img {
+    width: 70% !important;
+  }
+  .sz-icon.right,
+  .sz-icon.left {
+    padding: 0 15px 0 !important;
+  }
+  .how-it-works h1 {
+    font-size: 22px;
+  }
+
+  .how-it-works p {
+    font-size: 18px;
+  }
 }

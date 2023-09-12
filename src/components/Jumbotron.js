@@ -3,9 +3,9 @@ import sparkles from "../assets/svgs/sparkles.svg";
 
 export default function Jumbotron() {
   return (
-    <div className="jumbotron container flex-grow-1 h-100">
+    <div className="jumbotron container p flex-grow-1 h-100">
       <div className="row h-100 align-items-center">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6 mb-3">
           <div className="wrap">
             <img className="sz-icon" src={sparkles} alt="Sparkles" />
             <h1>
@@ -16,7 +16,7 @@ export default function Jumbotron() {
               Introducing ShopZetu's Vendor Management System! An essential tool
               for every vendor to help ease workflow.
             </p>
-            <form className="row g-3 mx-auto">
+            <form className="row contact-us-form g-3 mx-auto">
               <div className="col-8 col-md-8">
                 <label for="email" className="visually-hidden">
                   Email
@@ -30,7 +30,10 @@ export default function Jumbotron() {
                 />
               </div>
               <div className="col-4 col-md-4">
-                <button type="submit" className="btn btn-default mb-3">
+                <button
+                  type="submit"
+                  className="btn btn-default mb-3 contact-us-submit"
+                >
                   Contact us
                 </button>
               </div>
@@ -38,13 +41,13 @@ export default function Jumbotron() {
           </div>
         </div>
         <div className="col-12 col-md-6 d-flex justify-content-center h-100">
-            <img className="sz-icon left" src={sparkles} alt="Sparkles" />
-            <img
-              alt="Junior Reis"
-              className="img-fluid sz-img"
-              src={junior_reis}
-            />
-            <img className="sz-icon right" src={sparkles} alt="Sparkles" />
+          <img className="sz-icon left" src={sparkles} alt="Sparkles" />
+          <img
+            alt="Junior Reis"
+            className="img-fluid sz-img"
+            src={junior_reis}
+          />
+          <img className="sz-icon right" src={sparkles} alt="Sparkles" />
         </div>
       </div>
     </div>

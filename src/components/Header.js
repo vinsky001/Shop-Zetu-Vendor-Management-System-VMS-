@@ -1,4 +1,4 @@
-// import SigninForm from "./signinform";
+import SigninForm from "./SigninForm";
 
 export default function Header() {
   return (
@@ -51,6 +51,9 @@ export default function Header() {
                   Contact Us
                 </a>
               </li>
+              <li>
+                <span class="slider"></span>
+              </li>
             </ul>
             <button
               className="btn btn-default text-bold"
@@ -60,6 +63,7 @@ export default function Header() {
             >
               Sign in
             </button>
+
             {/* Signin Popup */}
             <div
               className="modal fade"
@@ -68,7 +72,7 @@ export default function Header() {
               aria-labelledby="signinPopupLabel"
               aria-hidden="true"
             >
-              <div className="modal-dialog modal-dialog-centered modal-dialog modal-xl">
+              <div className="modal-dialog modal-dialog-centered modal-dialog modal-lg">
                 <div className="modal-content br-0">
                   <div className="modal-header b-0">
                     <button
@@ -78,9 +82,11 @@ export default function Header() {
                       aria-label="Close"
                     ></button>
                   </div>
-                  <div className="modal-body">
-                    <p className="text-center m-0">Signin & Signup Form</p>
-                    {/* <SigninForm /> */}
+                  <div
+                    style={{ paddingBottom: 3 + "rem" }}
+                    className="modal-body d-flex justify-content-center aligh-items-center"
+                  >
+                    <SigninForm />
                   </div>
                 </div>
               </div>
