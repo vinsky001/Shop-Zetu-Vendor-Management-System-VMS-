@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
-
 export default function Header() {
-  const noRef = null;
-
   return (
     <header className="header flex-grow-0">
       <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <a className="navbar-brand text-bold" href={noRef}>
+        <div className="container">
+          <a className="navbar-brand text-bold" href="./">
             ShopZetu
           </a>
           <button
@@ -26,34 +22,34 @@ export default function Header() {
               className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto"
             >
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href={noRef}>
+                <a className="nav-link active" aria-current="page" href="./">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={noRef}>
+                <a className="nav-link" href="./">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={noRef}>
+                <a className="nav-link" href="./">
                   Brands
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={noRef}>
-                  Pricing
+                <a className="nav-link" href="./">
+                  My Dashboard
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={noRef}>
+                <a className="nav-link" href="./">
                   Join as Vendor
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={noRef}>
+                <a className="nav-link" href="./">
                   Contact Us
-                </Link>
+                </a>
               </li>
             </ul>
             <button className="btn btn-default text-bold" type="submit">
