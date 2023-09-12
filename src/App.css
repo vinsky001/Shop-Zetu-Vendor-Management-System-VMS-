@@ -77,22 +77,29 @@
   padding-bottom: 1rem !important;
   padding-left: 1rem !important;
 }
+.b-0 {
+  border: 0 !important;
+}
+.br-0 {
+  border-radius: 0 !important;
+}
 
 /* Images */
 .sz-img {
-  border-radius: 35px !important;
+  border-radius: 10px !important;
 }
 .sz-icon {
   margin-bottom: 40px;
-  padding: 0 35px 0 !important;
 }
 .sz-icon.right {
   margin-top: 0 !important;
   margin-bottom: auto !important;
+  padding: 0 35px 0 !important;
 }
 .sz-icon.left {
   margin-top: auto !important;
   margin-bottom: auto !important;
+  padding: 0 35px 0 !important;
 }
 
 .wrap {
