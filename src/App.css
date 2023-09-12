@@ -118,19 +118,13 @@
   font-size: 24px !important;
 }
 
-ol.how-it-works {
+.how-it-works h1 {
   font-size: 32px;
-  font-weight: 600 !important;
+  /* font-weight: 600 !important; */
 }
 
-ol.how-it-works li {
-  margin-top: 0 !important;
-  padding-left: 32px !important;
-  margin-bottom: 64px !important;
-}
-
-ol.how-it-works li::marker {
-  color: var(--sz-blue) !important;
+.how-it-works p {
+  font-size: 24px;
 }
 
 ul.pricing li {
