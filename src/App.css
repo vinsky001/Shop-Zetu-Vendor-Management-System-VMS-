@@ -84,13 +84,22 @@
 }
 .sz-icon {
   margin-bottom: 40px;
+  padding: 0 35px 0 !important;
+}
+.sz-icon.right {
+  margin-top: 0 !important;
+  margin-bottom: auto !important;
+}
+.sz-icon.left {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 .wrap {
-  max-width: 500px !important;
+  max-width: 700px !important;
 }
 
-.p-2>.p-4 {
+.p-2 > .p-4 {
   background-color: var(--sz-grey);
 }
 
@@ -129,7 +138,7 @@ ul.pricing li {
   margin-bottom: 120px !important;
 }
 
-.mb-120>.text-bold {
+.mb-120 > .text-bold {
   font-size: 20px;
 }
 
@@ -150,7 +159,6 @@ ul.pricing li {
 .form-1 input {
   margin-bottom: 32px !important;
 }
-
 
 footer.footer {
   color: var(--sz-grey) !important;
