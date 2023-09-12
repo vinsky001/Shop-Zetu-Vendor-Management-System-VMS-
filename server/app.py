@@ -3,7 +3,7 @@ from flask_bcrypt import Bcrypt
 from flask_cors import CORS, cross_origin
 from flask_session import Session
 from config import ApplicationConfig
-from models import db, User
+from models import db, User, Message
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
@@ -64,6 +64,24 @@ def login_user():
     session["user_id"] = user.id
 
     return jsonify({"id": user.id, "email": user.email})
+
+
+@app.route("/send_message", methods=["POST"])
+def send_message():
+    user_id = session.get("user_id")
+
+    if not user_id:
+        return jsonify({"error": "Unauthorized"}), 401
+    
+    message_text = request.json["message_text"]
+    user_email = request.json["user_email"]
+
+    # Create a new message and save it to the database
+    new_message = Message(sender_id=user_id, message=message_text)
+    db.session.add(new_message)
+    db.session.commit()
+
+    return jsonify({"message": "essage sent successfully", "user_email": user_email, "message_text": message_text})
 
 @app.route("/logout", methods=["POST"])
 def logout_user():
