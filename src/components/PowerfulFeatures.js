@@ -1,9 +1,4 @@
-import Jumbotron from "../components/Jumbotron";
-import WhatOurUsersSay from "../components/WhatOurUsersSay";
-import FlexiblePricing from "../components/FlexiblePrices";
-import HowItWorks from "../components/HowItWorks";
-import Contact from "./Contact";
-import "../Animation.css"
+import "../Animation.css";
 
 import cloud from "../assets/svgs/cloud_upload.svg";
 import cart from "../assets/svgs/shopping_cart.svg";
@@ -12,12 +7,9 @@ import frame from "../assets/svgs/frame_impact.svg";
 import monitoring from "../assets/svgs/monitoring.svg";
 import payments from "../assets/svgs/payments.svg";
 
-
 export default function PowerfulFeatures() {
-
   return (
     <section class="container-fluid p">
-      <Jumbotron/>
       <h1 class="text-center py-4 mt-12">
         Powerful Features to Boost Your Efficiency
       </h1>
@@ -36,7 +28,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-            <img src={cart} alt="Shopping Cart" className="mb-3" />
+              <img src={cart} alt="Shopping Cart" className="mb-3" />
               <h4>
                 Order and Inventory
                 <br />
@@ -47,7 +39,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-            <img src={diversity} alt="Users" className="mb-3" />
+              <img src={diversity} alt="Users" className="mb-3" />
               <h4>
                 Collaborative Product
                 <br />
@@ -61,7 +53,7 @@ export default function PowerfulFeatures() {
         <div class="row">
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-            <img src={frame} alt="Search" className="mb-3" />
+              <img src={frame} alt="Search" className="mb-3" />
               <h4>
                 Quality Control and
                 <br />
@@ -72,7 +64,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-            <img src={monitoring} alt="Charts" className="mb-3" />
+              <img src={monitoring} alt="Charts" className="mb-3" />
               <h4>
                 Real Performance
                 <br />
@@ -83,7 +75,7 @@ export default function PowerfulFeatures() {
           </div>
           <div class="col-12 col-md-4 p-2">
             <div class="p-4">
-            <img src={payments} alt="Payments" className="mb-3" />
+              <img src={payments} alt="Payments" className="mb-3" />
               <h4>
                 Easy Finance
                 <br />
@@ -94,11 +86,6 @@ export default function PowerfulFeatures() {
           </div>
         </div>
       </div>
-      <FlexiblePricing/>
-      <HowItWorks/>
-      <WhatOurUsersSay/>
-      <Contact/>
-
     </section>
   );
 }
