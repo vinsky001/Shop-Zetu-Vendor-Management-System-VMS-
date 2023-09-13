@@ -33,7 +33,7 @@ export default function SigninForm() {
             <Components.LeftOverlayPanel signinIn={signIn}>
               <Components.Title>Welcome Back!</Components.Title>
               <Components.Paragraph>
-                To keep connected with us please signin with your personal info
+                Signin below to access your dashboard
               </Components.Paragraph>
               <Components.GhostButton onClick={() => toggle(true)}>
                 Sign In
@@ -41,9 +41,9 @@ export default function SigninForm() {
             </Components.LeftOverlayPanel>
 
             <Components.RightOverlayPanel signinIn={signIn}>
-              <Components.Title>Hello, Friend!</Components.Title>
+              <Components.Title>Hello there!</Components.Title>
               <Components.Paragraph>
-                Enter Your personal details and start journey with us
+                Ready to start journey with us? Click the signup button below
               </Components.Paragraph>
               <Components.GhostButton onClick={() => toggle(false)}>
                 Sigin Up
