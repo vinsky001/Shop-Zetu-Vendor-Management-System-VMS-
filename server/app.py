@@ -10,8 +10,8 @@ app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
 
 # Connects our app file to the database
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///./db.sqlite"
-app.config["SECRET_KEY"] = "18f3e4d01227bda3eabd490c"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///./db.sqlite"
+# app.config["SECRET_KEY"] = "18f3e4d01227bda3eabd490c"
 app.config["MAIL_SERVER"] = "smtp.gmail.com."
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USERNAME"] = "ekibet544@gmail.com"
