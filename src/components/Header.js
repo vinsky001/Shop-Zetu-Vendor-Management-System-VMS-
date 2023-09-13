@@ -1,6 +1,8 @@
 import SigninForm from "./SigninForm";
 
 export default function Header() {
+  const noRef = null;
+
   return (
     <header className="header flex-grow-0">
       <nav className="navbar navbar-expand-lg">
@@ -42,7 +44,13 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <a
+                  className="nav-link text-bold"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signinPopup"
+                  href={noRef}
+                >
                   Join as Vendor
                 </a>
               </li>
