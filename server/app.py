@@ -5,6 +5,7 @@ from flask_session import Session
 from config import ApplicationConfig
 from models import db, User
 from flask_mail import Mail, Message
+import smtplib
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
@@ -15,7 +16,7 @@ app.config.from_object(ApplicationConfig)
 app.config["MAIL_SERVER"] = "smtp.gmail.com."
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USERNAME"] = "ekibet544@gmail.com"
-app.config["MAIL_PASSWORD"] = "99icloud"
+app.config["MAIL_PASSWORD"] = "qmjqifkmsnqeiioy"
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
@@ -31,6 +32,7 @@ with app.app_context():
 
 
 # Getting current user (Home page)
+@cross_origin
 @app.route("/@me")
 def get_current_user():
     user_id = session.get("user_id")
@@ -43,6 +45,7 @@ def get_current_user():
 
 
 # Registering a new user
+@cross_origin
 @app.route("/register", methods=["POST"])
 def register_user():
     email = request.json["email"]
@@ -64,6 +67,7 @@ def register_user():
 
 
 # Logging in an existing user
+@cross_origin
 @app.route("/login", methods=["POST"])
 def login_user():
     email = request.json["email"]
@@ -101,6 +105,7 @@ def login_user():
 
 
 # Contact form and send emails with Flask for support or feedback
+@cross_origin
 @app.route("/contact", methods=["POST"])
 def contact():
     name = request.form.get("name")
@@ -124,6 +129,7 @@ def contact():
 
 
 # Logging out a user
+@cross_origin
 @app.route("/logout", methods=["POST"])
 def logout_user():
     session.pop("user_id")
@@ -131,4 +137,4 @@ def logout_user():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)
