@@ -1,13 +1,51 @@
 import andrew_neel from "../assets/images/andrew-neel.jpg";
 import sparkles from "../assets/svgs/sparkles.svg";
+import React, { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/submit_form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');      
+      } else {
+        console.log('Error sending email');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+ };
+
+
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+  };
+
   return (
     <section class="container-fluid p contact">
       <div class="row container mx-auto">
         <div class="col-12 col-md-6 mb-4">
           <h1 class="text-center">Contact Us</h1>
-          <form class="contact w-60" aria-describedby="formInfo">
+          <form class="contact w-60" aria-describedby="formInfo" onSubmit={handleSubmit}>
             <div class="form-1 p-4 my-4">
               <div class="mb-3">
                 <label for="name" class="form-label">
@@ -17,7 +55,10 @@ export default function Contact() {
                   type="text"
                   class="form-control"
                   id="name"
+                  name="name"
                   placeholder="enter name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
               </div>
               <div class="mb-3">
@@ -28,7 +69,10 @@ export default function Contact() {
                   type="email"
                   class="form-control"
                   id="email"
+                  name="email"
                   placeholder="enter email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
               </div>
               <div class="mb-3">
@@ -39,7 +83,10 @@ export default function Contact() {
                   row="7"
                   class="form-control"
                   id="message"
+                  name="message"
                   placeholder="enter message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                 ></textarea>
               </div>
             </div>
