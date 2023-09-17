@@ -13,12 +13,17 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/submit_form', {
+      const formData = new FormData();
+      formData.append('name', formData.name);
+      formData.append('email', formData.email);
+      formData.append('message', formData.message);
+
+      const response = await fetch('http://127.0.0.1:5000/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify(formData),
+          body: new URLSearchParams(formData).toString(),
       });
 
       if (response.ok) {
