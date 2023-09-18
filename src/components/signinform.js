@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import * as Components from "./Components";
+import { useNavigate } from "react-router-dom";
 
 export default function SigninForm() {
-  const [signIn, toggle] = React.useState(true);
+  const [signIn, toggle] = useState(true);
   const [formData, setformData] = useState({
     name: '',
     email: '',
     password: '',
   });
+
+  // add redirect handler from react router dom
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -25,16 +30,17 @@ export default function SigninForm() {
       });
 
       if (response.status === 200) {
-        window.location.href = '/';
-        console.log('Logged in User');
+        // Handle successful login
+        navigate("/");
+      } else if (response.status === 401) {
+        // Handle unauthorized login attempt
+        alert('Invalid credentials');
       } else {
-        // Handle login error
-        console.error('Login Failed');
+        // Handle other errors
+        console.error('Login failed');
       }
     } catch (error) {
-      if (error.response.status === 401) { // Corrected the response status
-        alert('Invalid credentials');
-      }
+      console.error(error);
     }
   };
 
@@ -60,6 +66,7 @@ export default function SigninForm() {
       console.error("Error while registering:", error);
     }
   };
+
 
   return (
     <>
@@ -93,7 +100,9 @@ export default function SigninForm() {
               <Components.Paragraph>
                 Sign in below to access your dashboard
               </Components.Paragraph>
-              <Components.GhostButton onClick={() => toggle(true)}>
+              <Components.GhostButton onClick={() => {
+                toggle(false);
+              }} >
                 Sign In
               </Components.GhostButton>
             </Components.LeftOverlayPanel>
@@ -103,7 +112,9 @@ export default function SigninForm() {
               <Components.Paragraph>
                 Ready to start journey with us? Click the signup button below
               </Components.Paragraph>
-              <Components.GhostButton onClick={() => toggle(false)}>
+              <Components.GhostButton onClick={() =>{
+                toggle(false);
+              }} >
                 Sign Up
               </Components.GhostButton>
             </Components.RightOverlayPanel>
