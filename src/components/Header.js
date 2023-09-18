@@ -1,15 +1,17 @@
-import SigninForm from "./SigninForm";
+import { Link } from "react-router-dom";
+import SigninForm from "./signinform";
 
 export default function Header() {
   const noRef = null;
+  const ShopZetuDemoUrl = "https://shopzetu.com/pages/about-us";
 
   return (
     <header className="header flex-grow-0">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand text-bold" href="./">
+          <Link className="navbar-brand text-bold" to="/">
             ShopZetu
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,24 +26,24 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="./">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <a className="nav-link" href={ShopZetuDemoUrl} target="_blank" rel="noreferrer">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <Link className="nav-link" to="/brands">
                   Brands
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <Link className="nav-link" to="/dashboard">
                   My Dashboard
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a
@@ -55,9 +57,9 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./">
+                <Link className="nav-link" to="/contact">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
                 <span class="slider"></span>
