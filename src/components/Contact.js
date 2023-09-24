@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import andrew_neel from "../assets/images/andrew-neel.jpg";
 import sparkles from "../assets/svgs/sparkles.svg";
 import React, { useState } from "react";
@@ -8,6 +9,9 @@ export default function Contact() {
     email: '',
     message: '',
   });
+
+  const navigate = useNavigate();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,27 +26,31 @@ export default function Contact() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams(formData).toString(),
+        },
+        body: new URLSearchParams(formData).toString(),
       });
 
       if (response.ok) {
-        console.log('Email sent successfully');      
+        console.log('Email sent successfully');
+        navigate('/success')
       } else {
         console.log('Error sending email');
+        navigate("/error")
       }
     } catch (error) {
       console.error('An error occurred:', error);
+      navigate("/error")
+
     }
- };
+  };
 
 
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (

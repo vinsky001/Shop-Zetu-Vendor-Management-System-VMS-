@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import SigninForm from "./signinform";
+import { ShopZetuDemoUrl } from "../data/db";
 
 export default function Header() {
   const noRef = null;
-  const ShopZetuDemoUrl = "https://shopzetu.com/pages/about-us";
-
+  
   return (
     <header className="header flex-grow-0">
       <nav className="navbar navbar-expand-lg">

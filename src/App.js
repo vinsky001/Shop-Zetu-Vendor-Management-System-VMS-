@@ -3,8 +3,6 @@ import React from "react";
 import "./App.css";
 
 // Pages
-import About from "./pages/About";
-import Join_as_vendor from "./pages/Join-as-vendor";
 import Pricing from "./pages/Pricing";
 
 // Components
@@ -14,9 +12,11 @@ import Home from "./components/Home";
 import HowItWorks from "./components/HowItWorks";
 import Header from "./components/Header";
 import NotFound from "./components/NotFound";
+import SubmitSuccess from "./components/SubmitSuccess";
 
 // Utilities
 import { Route, Routes } from "react-router-dom";
+import SubmitFailed from "./components/SubmitFailed";
 
 function App() {
   return (
@@ -28,11 +28,11 @@ function App() {
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/how-it-works" Component={HowItWorks} />
-          <Route path="/about" Component={About} />
-          <Route path="/join-as-vendor" Component={Join_as_vendor} />
           <Route path="/contact" Component={Contact} />
           <Route path="/pricing" Component={Pricing} />
           <Route path="*" Component={NotFound} />
+          <Route path="/success" Component={SubmitSuccess} />
+          <Route path="/error" Component={SubmitFailed} />
         </Routes>
       </main>
       <footer>

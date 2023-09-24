@@ -1,4 +1,4 @@
-import { Container, Text, Box, Button } from "@chakra-ui/react";
+import { Container, Text, Box} from "@chakra-ui/react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ function NotFound() {
   return (
     <Container textAlign="center" mt="5%" mb={"30%"} >
       <Text fontSize="2xl" fontWeight="bold">
-        The {pathname.split("/")} page is currentlly unavailable!
+        The {pathname.split("/")} page is currently unavailable!
       </Text>
       <Box mt="4" fontSize="xl">
         Taking you back home in {secondsLeft}

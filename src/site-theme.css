@@ -50,11 +50,11 @@ h1 {
     border-radius: 50%;
 } */
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -76,3 +76,18 @@ body.dark-mode {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
 }
+
+/* A better way of applying theme based on mode */
+/* @media(preferes-color-scheme: dark) {
+    #root, html,body {
+        background-color: var(--background-color-dark);
+        color: var(--text-color-dark);
+    }
+}
+
+@media(preferes-color-scheme: light) {
+    #root, html, body {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+    }
+} */

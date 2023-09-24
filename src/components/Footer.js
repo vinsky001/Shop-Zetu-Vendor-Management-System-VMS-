@@ -1,126 +1,46 @@
-export default function Footer() {
-  const noRef = null;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ShopZetuDemoUrl } from '../data/db';
+import '../Animation.css'; // Import your CSS file with animations
 
+export default function Footer() {
   return (
-    <footer class="container-fluid bd-footer py-4 py-md-5 mt-5 footer">
-      <div class="container py-4 py-md-5 px-4 px-md-3">
-        <div class="row">
-          <div class="col-lg-3 mb-3">
-            <a
-              class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
-              href="/"
-              aria-label="Bootstrap"
-            >
-              <span class="fs-5">Shop Zetu</span>
-            </a>
-            <ul class="list-unstyled small">
-              <li class="mb-2">
-                Streamline Management for Vendors in the Fashion Industry
+    <footer className="container-fluid bd-footer py-4 py-md-5 mt-5 footer">
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-lg-3 mb-3">
+            <Link to="/" className="d-inline-flex align-items-center text-decoration-none" aria-label="Shop Zetu">
+              <h3 className="text-white text-animation hover-gradient">Shop Zetu</h3>
+            </Link>
+            <p className="mt-3 text-animation fadeIn">
+              Streamline Management for Vendors in the Fashion Industry
+            </p>
+            <p className="text-muted text-animation fadeIn">
+              &copy; Copyright {new Date().getFullYear()}
+            </p>
+          </div>
+          <div className="col-lg-3 mb-3">
+            <h5 className="text-animation fadeIn">Links</h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <Link to="/" className="text-light hover-gradient text-animation fadeIn">Home</Link>
               </li>
-              <li class="mb-2">
-                &copy;&nbsp;
-                {/* <script>document.write(new Date().getFullYear());</script> */}
-                {new Date().getFullYear()} {/* More maintainable*/}
+              <li className="mb-2">
+                <Link to="/pricing" className="text-light hover-gradient text-animation fadeIn">Pricing</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/contact" className="text-light hover-gradient text-animation fadeIn">Contact Us</Link>
               </li>
             </ul>
           </div>
-          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href={noRef}>Home</a>
+          <div className="col-lg-3 mb-3">
+            <h5 className="text-animation fadeIn">About</h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href={ShopZetuDemoUrl} target="_blank" rel="noreferrer" className="text-light hover-gradient text-animation fadeIn">Demo</a>
               </li>
-              <li class="mb-2">
-                <a href={noRef}>About</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Pricing</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Join as Vendor</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-2 mb-3">
-            <h5>Guides</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href={noRef}>Getting started</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Resources</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Guide 3</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Guide 4</a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef}>Guide 5</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-2 mb-3">
-            <h5>Projects</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 1
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 2
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 3
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 4
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 5
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-2 mb-3">
-            <h5>Our Partners</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 1
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 2
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 3
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 4
-                </a>
-              </li>
-              <li class="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 5
-                </a>
+              <li className="mb-2">
+                <Link to="/about" className="text-light hover-gradient text-animation fadeIn">Our Team</Link>
               </li>
             </ul>
           </div>
