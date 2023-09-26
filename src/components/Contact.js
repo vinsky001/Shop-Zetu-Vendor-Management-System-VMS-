@@ -4,40 +4,44 @@ import React, { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const sendStatus = document.getElementById("send-status");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('/submit_form', {
-        method: 'POST',
+      const response = await fetch("/submit_form", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('Email sent successfully');      
+        console.log("Email sent successfully");
+        sendStatus.innerHTML = `<div class="alert alert-success mt-3 text-center" role="alert">Email sent successfully!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
       } else {
-        console.log('Error sending email');
+        console.log("Error sending email");
+        sendStatus.innerHTML = `<div class="alert alert-danger mt-3 text-center" role="alert">Error sending email, please try again!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
       }
     } catch (error) {
-      console.error('An error occurred:', error);
+      console.error("An error occurred:", error);
+      sendStatus.innerHTML = `<div class="alert alert-danger mt-3 text-center" role="alert">An error occurred!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
     }
- };
+  };
 
-
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (
@@ -45,7 +49,11 @@ export default function Contact() {
       <div class="row container mx-auto">
         <div class="col-12 col-md-6 mb-4">
           <h1 class="text-center">Contact Us</h1>
-          <form class="contact w-60" aria-describedby="formInfo" onSubmit={handleSubmit}>
+          <form
+            class="contact w-60"
+            aria-describedby="formInfo"
+            onSubmit={handleSubmit}
+          >
             <div class="form-1 p-4 my-4">
               <div class="mb-3">
                 <label for="name" class="form-label">
@@ -103,6 +111,7 @@ export default function Contact() {
               </div>
             </div>
           </form>
+          <div id="send-status"></div>
         </div>
         <div class="col-12 col-md-6 d-flex justify-content-center h-100">
           <img className="sz-icon left" src={sparkles} alt="Sparkles" />

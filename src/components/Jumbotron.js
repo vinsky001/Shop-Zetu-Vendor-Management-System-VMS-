@@ -26,7 +26,7 @@ export default function Jumbotron() {
                   className="form-control email-box"
                   id="email"
                   placeholder="enter email"
-                  autofocus
+                  autoFocus
                 />
               </div>
               <div className="col-4 col-md-4">
