@@ -9,9 +9,11 @@ export default function SigninForm() {
         <Components.SignUpContainer signinIn={signIn}>
           <Components.Form>
             <Components.Title>Join as Vendor</Components.Title>
-            <Components.Input type="text" placeholder="Name" />
+            <Components.Input type="text" placeholder="First name" />
+            <Components.Input type="text" placeholder="Last name" />
             <Components.Input type="email" placeholder="Email" />
             <Components.Input type="password" placeholder="Password" />
+            <Components.Input type="password" placeholder="Confirm password" />
             <Components.Button>Sign Up</Components.Button>
           </Components.Form>
         </Components.SignUpContainer>
@@ -46,7 +48,7 @@ export default function SigninForm() {
                 Ready to start journey with us? Click the signup button below
               </Components.Paragraph>
               <Components.GhostButton onClick={() => toggle(false)}>
-                Sigin Up
+                Sign Up
               </Components.GhostButton>
             </Components.RightOverlayPanel>
           </Components.Overlay>
