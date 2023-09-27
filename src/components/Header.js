@@ -62,7 +62,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <span className="slider"></span>
+                <span class="slider"></span>
               </li>
             </ul>
             <button
