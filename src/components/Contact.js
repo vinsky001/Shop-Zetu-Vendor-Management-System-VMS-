@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router-dom";
 import andrew_neel from "../assets/images/andrew-neel.jpg";
 import sparkles from "../assets/svgs/sparkles.svg";
 import React, { useState } from "react";
@@ -46,26 +45,23 @@ export default function Contact() {
   };
 
   return (
-    <section class="container-fluid p contact">
-      <div class="row container mx-auto">
-        <div class="col-12 col-md-6 mb-4">
-          <h1 class="text-center">Contact Us</h1>
+    <section className="container-fluid p contact">
+      <div className="row container mx-auto">
+        <div className="col-12 col-md-6 mb-4">
+          <h1 className="text-center">Contact Us</h1>
           <form
-            class="contact w-60"
+            className="contact w-60"
             aria-describedby="formInfo"
             onSubmit={handleSubmit}
           >
             <div className="form-1 p-4 my-4">
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
-            <div class="form-1 p-4 my-4">
-              <div class="mb-3">
-                <label for="name" class="form-label">
                   Name
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   name="name"
                   placeholder="enter name"
@@ -75,13 +71,11 @@ export default function Contact() {
               </div>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-              <div class="mb-3">
-                <label for="email" class="form-label">
                   Email
                 </label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   name="email"
                   placeholder="enter email"
@@ -91,13 +85,11 @@ export default function Contact() {
               </div>
               <div className="mb-3">
                 <label htmlFor="message" className="form-label">
-              <div class="mb-3">
-                <label for="message" class="form-label">
                   Message
                 </label>
                 <textarea
                   row="7"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   name="message"
                   placeholder="enter message"
@@ -106,14 +98,14 @@ export default function Contact() {
                 ></textarea>
               </div>
             </div>
-            <div class="form-2">
-              {/* <!-- <div id="formInfo" class="form-text mb-2">
+            <div className="form-2">
+              {/* <!-- <div id="formInfo" className="form-text mb-2">
                   <small>
                     We'll never share your information with anyone else.
                   </small>
                 </div> --> */}
-              <div class="text-center">
-                <button type="submit" class="btn btn-lg btn-default w-50">
+              <div className="text-center">
+                <button type="submit" className="btn btn-lg btn-default w-50">
                   Send
                 </button>
               </div>
@@ -121,9 +113,13 @@ export default function Contact() {
           </form>
           <div id="send-status"></div>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center h-100">
+        <div className="col-12 col-md-6 d-flex justify-content-center h-100">
           <img className="sz-icon left" src={sparkles} alt="Sparkles" />
-          <img alt="Andrew Neel" class="img-fluid sz-img" src={andrew_neel} />
+          <img
+            alt="Andrew Neel"
+            className="img-fluid sz-img"
+            src={andrew_neel}
+          />
           <img className="sz-icon right" src={sparkles} alt="Sparkles" />
         </div>
       </div>
