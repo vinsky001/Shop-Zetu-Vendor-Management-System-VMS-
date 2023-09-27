@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import andrew_neel from "../assets/images/andrew-neel.jpg";
 import sparkles from "../assets/svgs/sparkles.svg";
 import React, { useState } from "react";

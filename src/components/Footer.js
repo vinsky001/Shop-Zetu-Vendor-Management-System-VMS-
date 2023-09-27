@@ -1,9 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ShopZetuDemoUrl } from '../data/db';
-import '../Animation.css'; // Import your CSS file with animations
+import React from "react";
+// import { Link } from "react-router-dom";
+// import { ShopZetuDemoUrl } from "../data/db";
+import "../Animation.css"; // Import your CSS file with animations
 
 export default function Footer() {
+  const noRef = null;
+
   return (
     <footer className="container-fluid bd-footer py-4 py-md-5 mt-5 footer">
       <div className="container py-4 py-md-5 px-4 px-md-3">
