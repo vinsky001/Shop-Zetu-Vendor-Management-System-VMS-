@@ -6,7 +6,7 @@ export default function SigninForm() {
   return (
     <>
       <Components.Container>
-        <Components.SignUpContainer signinIn={signIn}>
+        <Components.SignUpContainer signin={signIn}>
           <Components.Form>
             <Components.Title>Join as Vendor</Components.Title>
             <Components.Input type="text" placeholder="First name" />
@@ -18,7 +18,7 @@ export default function SigninForm() {
           </Components.Form>
         </Components.SignUpContainer>
 
-        <Components.SignInContainer signinIn={signIn}>
+        <Components.SignInContainer signin={signIn}>
           <Components.Form>
             <Components.Title>Sign in</Components.Title>
             <Components.Input type="email" placeholder="Email" />
@@ -30,9 +30,9 @@ export default function SigninForm() {
           </Components.Form>
         </Components.SignInContainer>
 
-        <Components.OverlayContainer signinIn={signIn}>
-          <Components.Overlay signinIn={signIn}>
-            <Components.LeftOverlayPanel signinIn={signIn}>
+        <Components.OverlayContainer signin={signIn}>
+          <Components.Overlay signin={signIn}>
+            <Components.LeftOverlayPanel signin={signIn}>
               <Components.Title>Welcome Back!</Components.Title>
               <Components.Paragraph>
                 Signin below to access your dashboard
@@ -42,7 +42,7 @@ export default function SigninForm() {
               </Components.GhostButton>
             </Components.LeftOverlayPanel>
 
-            <Components.RightOverlayPanel signinIn={signIn}>
+            <Components.RightOverlayPanel signin={signIn}>
               <Components.Title>Hello there!</Components.Title>
               <Components.Paragraph>
                 Ready to start journey with us? Click the signup button below

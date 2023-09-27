@@ -18,7 +18,7 @@ export default function Jumbotron() {
             </p>
             <form className="row contact-us-form g-3 mx-auto">
               <div className="col-8 col-md-8">
-                <label for="email" className="visually-hidden">
+                <label htmlFor="email" className="visually-hidden">
                   Email
                 </label>
                 <input
