@@ -7,20 +7,20 @@ import sparkles from "../assets/svgs/sparkles.svg";
 
 export default function HowItWorks() {
   return (
-    <section class="container-fluid how-it-works p">
-      <h1 class="text-center py-4">How it Works? 4 Easy Steps!</h1>
-      <div class="container">
-        <div class="row mb-3">
-          <div class="col-12 col-md-6 d-flex justify-content-center h-100">
+    <section className="container-fluid how-it-works p">
+      <h1 className="text-center py-4">How it Works? 4 Easy Steps!</h1>
+      <div className="container">
+        <div className="row mb-3">
+          <div className="col-12 col-md-6 d-flex justify-content-center h-100">
             <img className="sz-icon left" src={sparkles} alt="Sparkles" />
             <img
               alt="Create vendor"
-              class="img-fluid sz-img"
+              className="img-fluid sz-img"
               src={create_vendor}
             />
             <img className="sz-icon right" src={sparkles} alt="Sparkles" />
           </div>
-          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5">
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5">
             <div>
               <h1>
                 <span className="blue-text">1&nbsp;&nbsp;&nbsp;</span>Create a
@@ -35,17 +35,17 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-12 col-md-6 d-flex justify-content-center h-100 order-md-2">
+        <div className="row mb-3">
+          <div className="col-12 col-md-6 d-flex justify-content-center h-100 order-md-2">
             <img className="sz-icon left" src={sparkles} alt="Sparkles" />
             <img
               alt="Valeria Odnovol"
-              class="img-fluid sz-img"
+              className="img-fluid sz-img"
               src={place_order}
             />
             <img className="sz-icon right" src={sparkles} alt="Sparkles" />
           </div>
-          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5 order-md-1">
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5 order-md-1">
             <div>
               <h1>
                 <span className="blue-text">2&nbsp;&nbsp;&nbsp;</span>Place
@@ -60,17 +60,17 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-12 col-md-6 d-flex justify-content-center h-100">
+        <div className="row mb-3">
+          <div className="col-12 col-md-6 d-flex justify-content-center h-100">
             <img className="sz-icon left" src={sparkles} alt="Sparkles" />
             <img
               alt="Valeria Odnovol"
-              class="img-fluid sz-img"
+              className="img-fluid sz-img"
               src={collaborate}
             />
             <img className="sz-icon right" src={sparkles} alt="Sparkles" />
           </div>
-          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5">
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5">
             <div>
               <h1>
                 <span className="blue-text">3&nbsp;&nbsp;&nbsp;</span>
@@ -85,13 +85,13 @@ export default function HowItWorks() {
             </div>
           </div>
         </div>
-        <div class="row mb-3">
-          <div class="col-12 col-md-6 d-flex justify-content-center h-100 order-md-2">
+        <div className="row mb-3">
+          <div className="col-12 col-md-6 d-flex justify-content-center h-100 order-md-2">
             <img className="sz-icon left" src={sparkles} alt="Sparkles" />
-            <img alt="Valeria Odnovol" class="img-fluid sz-img" src={monitor} />
+            <img alt="Valeria Odnovol" className="img-fluid sz-img" src={monitor} />
             <img className="sz-icon right" src={sparkles} alt="Sparkles" />
           </div>
-          <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5 order-md-1">
+          <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center mt-5 order-md-1">
             <div>
               <h1>
                 <span className="blue-text">4&nbsp;&nbsp;&nbsp;</span>Monitor

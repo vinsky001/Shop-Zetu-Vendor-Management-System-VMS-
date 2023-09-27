@@ -21,7 +21,7 @@ import SubmitFailed from "./components/SubmitFailed";
 function App() {
   return (
     <div>
-      <header class="welcome d-flex flex-column">
+      <header className="welcome d-flex flex-column">
         <Header />
       </header>
       <main>

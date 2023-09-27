@@ -62,7 +62,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <span class="slider"></span>
+                <span className="slider"></span>
               </li>
             </ul>
             <button
@@ -78,7 +78,7 @@ export default function Header() {
             <div
               className="modal fade"
               id="signinPopup"
-              tabindex="-1"
+              tabIndex="-1"
               aria-labelledby="signinPopupLabel"
               aria-hidden="true"
             >

@@ -23,7 +23,7 @@ export default function Jumbotron() {
             </p>
             <form className="row contact-us-form g-3 mx-auto">
               <div className="col-8 col-md-8">
-                <label for="email" className="visually-hidden">
+                <label htmlFor="email" className="visually-hidden">
                   Email
                 </label>
                 <input
@@ -31,7 +31,7 @@ export default function Jumbotron() {
                   className="form-control email-box"
                   id="email"
                   placeholder="enter email"
-                  autofocus
+                  autoFocus
                 />
               </div>
               <div className="col-4 col-md-4">

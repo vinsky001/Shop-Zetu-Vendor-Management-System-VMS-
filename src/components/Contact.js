@@ -5,45 +5,37 @@ import React, { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const navigate = useNavigate();
-
+  const sendStatus = document.getElementById("send-status");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const formData = new FormData();
-      formData.append('name', formData.name);
-      formData.append('email', formData.email);
-      formData.append('message', formData.message);
-
-      const response = await fetch('http://127.0.0.1:5000/contact', {
-        method: 'POST',
+      const response = await fetch("/submit_form", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          "Content-Type": "application/json",
         },
-        body: new URLSearchParams(formData).toString(),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('Email sent successfully');
-        navigate('/success')
+        console.log("Email sent successfully");
+        sendStatus.innerHTML = `<div class="alert alert-success mt-3 text-center" role="alert">Email sent successfully!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
       } else {
-        console.log('Error sending email');
-        navigate("/error")
+        console.log("Error sending email");
+        sendStatus.innerHTML = `<div class="alert alert-danger mt-3 text-center" role="alert">Error sending email, please try again!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
       }
     } catch (error) {
-      console.error('An error occurred:', error);
-      navigate("/error")
-
+      console.error("An error occurred:", error);
+      sendStatus.innerHTML = `<div class="alert alert-danger mt-3 text-center" role="alert">An error occurred!&nbsp;<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`;
     }
   };
-
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,19 +46,23 @@ export default function Contact() {
   };
 
   return (
-    <section class="container-fluid p contact">
-      <div class="row container mx-auto">
-        <div class="col-12 col-md-6 mb-4">
-          <h1 class="text-center">Contact Us</h1>
-          <form class="contact w-60" aria-describedby="formInfo" onSubmit={handleSubmit}>
-            <div class="form-1 p-4 my-4">
-              <div class="mb-3">
-                <label for="name" class="form-label">
+    <section className="container-fluid p contact">
+      <div className="row container mx-auto">
+        <div className="col-12 col-md-6 mb-4">
+          <h1 className="text-center">Contact Us</h1>
+          <form
+            className="contact w-60"
+            aria-describedby="formInfo"
+            onSubmit={handleSubmit}
+          >
+            <div className="form-1 p-4 my-4">
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">
                   Name
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   name="name"
                   placeholder="enter name"
@@ -74,13 +70,13 @@ export default function Contact() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
                   Email
                 </label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   name="email"
                   placeholder="enter email"
@@ -88,13 +84,13 @@ export default function Contact() {
                   onChange={handleInputChange}
                 />
               </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">
                   Message
                 </label>
                 <textarea
                   row="7"
-                  class="form-control"
+                  className="form-control"
                   id="message"
                   name="message"
                   placeholder="enter message"
@@ -103,23 +99,28 @@ export default function Contact() {
                 ></textarea>
               </div>
             </div>
-            <div class="form-2">
-              {/* <!-- <div id="formInfo" class="form-text mb-2">
+            <div className="form-2">
+              {/* <!-- <div id="formInfo" className="form-text mb-2">
                   <small>
                     We'll never share your information with anyone else.
                   </small>
                 </div> --> */}
-              <div class="text-center">
-                <button type="submit" class="btn btn-lg btn-default w-50">
+              <div className="text-center">
+                <button type="submit" className="btn btn-lg btn-default w-50">
                   Send
                 </button>
               </div>
             </div>
           </form>
+          <div id="send-status"></div>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-center h-100">
+        <div className="col-12 col-md-6 d-flex justify-content-center h-100">
           <img className="sz-icon left" src={sparkles} alt="Sparkles" />
-          <img alt="Andrew Neel" class="img-fluid sz-img" src={andrew_neel} />
+          <img
+            alt="Andrew Neel"
+            className="img-fluid sz-img"
+            src={andrew_neel}
+          />
           <img className="sz-icon right" src={sparkles} alt="Sparkles" />
         </div>
       </div>
