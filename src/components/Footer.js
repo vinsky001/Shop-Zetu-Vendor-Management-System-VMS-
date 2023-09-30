@@ -6,6 +6,7 @@ import "../Animation.css"; // Import your CSS file with animations
 export default function Footer() {
   const noRef = null;
 
+  
   return (
     <footer class="container-fluid bd-footer py-4 py-md-5 mt-5 footer">
       <div class="container py-4 py-md-5 px-4 px-md-3">
