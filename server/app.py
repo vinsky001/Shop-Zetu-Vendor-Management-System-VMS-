@@ -6,6 +6,8 @@ from config import ApplicationConfig
 from models import db, User
 from flask_mail import Mail, Message
 import smtplib
+from models import register_user, login_user
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
@@ -26,6 +28,7 @@ CORS(app, supports_credentials=True)
 mail = Mail(app)
 server_session = Session(app)
 db.init_app(app)
+migrate = Migrate(app, db)
 
 with app.app_context():
     db.create_all()
