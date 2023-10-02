@@ -95,11 +95,7 @@ export default function Footer() {
                 </a>
               </li>
 
-              <li className="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 5
-                </a>
-              </li>
+  
             </ul>
           </div>
           <div className="col-6 col-lg-2 mb-3">
