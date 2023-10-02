@@ -1,6 +1,9 @@
 :root {
+  --sz-grey-darker: #6c6767;
   --sz-grey: #f9f9f9;
   --sz-blue: #3498db;
+  --sz-black: #333131;
+
   /* --sz-grey: #ffffff; #cccccc */
   /* --sz-grey: darkgrey; */
   --font-poppins: "Poppins", sans-serif;
@@ -84,9 +87,11 @@ body, html{
   padding-bottom: 1rem !important;
   padding-left: 1rem !important;
 }
+
 .b-0 {
   border: 0 !important;
 }
+
 .br-0 {
   border-radius: 0 !important;
 }
@@ -95,14 +100,17 @@ body, html{
 .sz-img {
   border-radius: 10px !important;
 }
+
 .sz-icon {
   margin-bottom: 40px;
 }
+
 .sz-icon.right {
   margin-top: 0 !important;
   margin-bottom: auto !important;
   padding: 0 35px 0 !important;
 }
+
 .sz-icon.left {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -113,7 +121,7 @@ body, html{
   max-width: 700px !important;
 }
 
-.p-2 > .p-4 {
+.p-2>.p-4 {
   background-color: var(--sz-grey);
 }
 
@@ -140,12 +148,16 @@ ul.pricing li {
   margin-bottom: 32px !important;
 }
 
+.color-black {
+  color: var(--sz-black);
+}
+
 .mb-120 {
   font-size: 18px;
   margin-bottom: 120px !important;
 }
 
-.mb-120 > .text-bold {
+.mb-120>.text-bold {
   font-size: 20px;
 }
 
@@ -167,46 +179,88 @@ ul.pricing li {
   margin-bottom: 32px !important;
 }
 
+
 footer.footer {
-  color: var(--sz-grey) !important;
-  background-color: var(--sz-blue);
+  color: var(--sz-grey-darker) !important;
+  /* background-color: var(--sz-blue); */
 }
 
+footer .footer h5 {
+  color: var(--sz-black)
+}
+
+
 .footer a {
-  color: var(--sz-grey) !important;
+  color: var(--sz-grey-darker) !important;
   text-decoration: none !important;
 }
 
 .footer a:hover {
-  color: var(--sz-grey) !important;
+  cursor: pointer !important;
+  color: var(--sz-grey-darker) !important;
   text-decoration: underline !important;
 }
+
+.footer-socials-parent {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-socials-ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: .5rem;
+}
+
+
+
+.footer-logo img {
+  height: 22px;
+  /* width: 18px; */
+
+}
+
+
+
+
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
   .p {
     padding: 70.5px 0.5rem 0.5rem !important;
   }
+
   .jumbotron {
     padding-top: 8px !important;
   }
+
   .jumbotron p {
     font-size: 18px;
   }
+
   .jumbotron button {
     font: 15px !important;
   }
+
   .contact-us-submit,
   .email-box {
     font-size: 15px !important;
   }
+
   .sz-img {
     width: 70% !important;
   }
+
   .sz-icon.right,
   .sz-icon.left {
     padding: 0 15px 0 !important;
   }
+
   .how-it-works h1 {
     font-size: 22px;
   }
