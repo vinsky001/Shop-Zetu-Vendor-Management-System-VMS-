@@ -1,5 +1,26 @@
+import "../App.css"
+import instagram from "../assets/svgs/instagram-logo.svg"
+import twitter from '../assets/svgs/twitter-logo.svg';
+import facebook from '../assets/svgs/facebook-logo.svg'
+
 export default function Footer() {
   const noRef = null;
+
+  // for better maintainability -> data that is imported from the same file and rendered in the same format should be stored in a common location
+  const ft_links = [
+    {
+      link_url: twitter
+    },
+    {
+      link_url: facebook
+    },
+    {
+      link_url: instagram
+    },
+
+
+  ]
+
 
   return (
     <footer className="container-fluid bd-footer py-4 py-md-5 mt-5 footer">
@@ -11,11 +32,13 @@ export default function Footer() {
               href="/"
               aria-label="Bootstrap"
             >
-              <span className="fs-5">Shop Zetu</span>
+              <h2 className="fs-5 blue-text">Shop Zetu</h2>
             </a>
             <ul className="list-unstyled small">
               <li className="mb-2">
-                Streamline Management for Vendors in the Fashion Industry
+                Welcome to Shop Zetu, your destination
+                for quality products.<br /> We cureate a unique
+                selection of items from around the world.
               </li>
               <li className="mb-2">
                 &copy;&nbsp;
@@ -24,20 +47,29 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-lg-2 offset-lg-1 mb-3">
-            <h5>Links</h5>
+          <div className="col-6 col-lg-2 offset-lg-1 mb-3 black-text">
+            <h5>Contact Us</h5>
+            <ul className="list-unstyled ">
+              <li className="mb-2">
+                <a className="" href={noRef}>contact@shopzetu.com</a>
+              </li>
+              <li className="mb-2">
+                <a href={noRef}>(123) 456 - 7890</a>
+              </li>
+
+            </ul>
+          </div>
+          <div className="col-6 col-lg-2 mb-3">
+            <h5>Shop</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
                 <a href={noRef}>Home</a>
               </li>
               <li className="mb-2">
-                <a href={noRef}>About</a>
+                <a href={noRef}>Products</a>
               </li>
               <li className="mb-2">
-                <a href={noRef}>Pricing</a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef}>Join as Vendor</a>
+                <a href={noRef}>About Us</a>
               </li>
               <li className="mb-2">
                 <a href={noRef}>Contact Us</a>
@@ -45,48 +77,24 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-6 col-lg-2 mb-3">
-            <h5>Guides</h5>
-            <ul className="list-unstyled">
-              <li className="mb-2">
-                <a href={noRef}>Getting started</a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef}>Resources</a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef}>Guide 3</a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef}>Guide 4</a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef}>Guide 5</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-6 col-lg-2 mb-3">
-            <h5>Projects</h5>
+            <h5>Customer Support</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 1
+                  FAQ
                 </a>
               </li>
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 2
+                  Help Center
                 </a>
               </li>
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 3
+                  Contact Support
                 </a>
               </li>
-              <li className="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Project 4
-                </a>
-              </li>
+
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
                   Project 5
@@ -95,35 +103,40 @@ export default function Footer() {
             </ul>
           </div>
           <div className="col-6 col-lg-2 mb-3">
-            <h5>Our Partners</h5>
+            <h5>Privacy and Legal</h5>
             <ul className="list-unstyled">
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 1
+                  Terms of service
                 </a>
               </li>
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 2
+                  Privacy Policy
                 </a>
               </li>
               <li className="mb-2">
                 <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 3
+                  Return Policy
                 </a>
               </li>
-              <li className="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 4
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href={noRef} target="_blank" rel="noreferrer">
-                  Partner 5
-                </a>
-              </li>
+
             </ul>
           </div>
+        </div>
+        <hr />
+        <div className="footer-socials-parent">
+          <div >
+            <span className="blue-text">{new Date().getFullYear()}</span>
+            <span className="px-2">Shop Zetu. All rights Reserved</span>
+          </div>
+          <ul className="list-unstyled footer-socials-ul">
+            {ft_links.map((link, index) => (
+              <li className="footer-logo" key={index}>
+                <img src={link.link_url} alt="footer social logos" />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

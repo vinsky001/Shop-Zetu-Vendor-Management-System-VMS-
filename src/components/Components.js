@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const mobileMediaQuery = css`
+ 
+`;
+
 
 export const Container = styled.div`
   background-color: #fff;
@@ -9,6 +14,11 @@ export const Container = styled.div`
   width: 678px;
   max-width: 100%;
   min-height: 550px;
+ @media (max-width: 768px) {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+  }
 `;
 
 export const SignUpContainer = styled.div`
@@ -28,6 +38,12 @@ export const SignUpContainer = styled.div`
     z-index: 5;
   `
       : null}
+   @media (max-width: 768px) {
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
 `;
 
 export const SignInContainer = styled.div`
@@ -40,6 +56,7 @@ export const SignInContainer = styled.div`
   z-index: 2;
   ${(props) =>
     props.signin !== true ? `transform: translateX(100%);` : null}
+
 `;
 
 export const Form = styled.form`
@@ -51,6 +68,7 @@ export const Form = styled.form`
   padding: 0 50px;
   height: 100%;
   text-align: center;
+
 `;
 
 export const Title = styled.h1`
@@ -64,6 +82,7 @@ export const Input = styled.input`
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+
 `;
 
 export const Button = styled.button`
@@ -158,3 +177,4 @@ export const Paragraph = styled.p`
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
 `;
+
