@@ -9,8 +9,15 @@
   --font-poppins: "Poppins", sans-serif;
 }
 
+
+
 * {
   font-family: var(--font-poppins);
+
+}
+
+body, html{
+  cursor: url('./assets/icons//Diamondtosh.cur'), auto;
 }
 
 /* Buttons */

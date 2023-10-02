@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import junior_reis from "../assets/images/junior-reis.jpg";
 import sparkles from "../assets/svgs/sparkles.svg";
+import { useState } from "react";
 
 export default function Jumbotron() {
+
+
+
   return (
     <div className="jumbotron container p flex-grow-1 h-100">
       <div className="row h-100 align-items-center">
@@ -52,4 +57,5 @@ export default function Jumbotron() {
       </div>
     </div>
   );
+
 }

@@ -37,7 +37,7 @@ export default function Footer() {
             <ul className="list-unstyled small">
               <li className="mb-2">
                 Welcome to Shop Zetu, your destination
-                for quality products.<br /> We cureate a unique
+                for quality products. We cureate a unique
                 selection of items from around the world.
               </li>
               <li className="mb-2">
