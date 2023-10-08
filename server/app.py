@@ -51,6 +51,8 @@ def get_current_user():
 @cross_origin
 @app.route("/register", methods=["POST"])
 def register_user():
+    firstname = request.json["firstname"]
+    lastname = request.json["lastname"]
     email = request.json["email"]
     password = request.json["password"]
 
@@ -60,7 +62,7 @@ def register_user():
         return jsonify({"error": "User already exists!"}), 409
 
     hashed_password = bcrypt.generate_password_hash(password)
-    new_user = User(email=email, password=hashed_password)
+    new_user = User(firstname=firstname, lastname=lastname, email=email, password=hashed_password)
     db.session.add(new_user)
     db.session.commit()
 
