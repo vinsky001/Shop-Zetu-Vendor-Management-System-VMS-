@@ -16,8 +16,8 @@ app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
 
 # Connects our app file to the database
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///./db.sqlite"
-# app.config["SECRET_KEY"] = "18f3e4d01227bda3eabd490c"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///../instance/db.sqlite"
+app.config["SECRET_KEY"] = "18f3e4d01227bda3eabd490c"
 app.config["MAIL_SERVER"] = "smtp.gmail.com."
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USERNAME"] = "ekibet544@gmail.com"
@@ -119,7 +119,7 @@ def login_user():
 def all_from_db():
     try:
         # Connect to the SQLite database
-        conn = sqlite3.connect("sqlite:///./db.sqlite")
+        conn = sqlite3.connect("sqlite:///../instance/db.sqlite")
         cursor = conn.cursor()
 
         # Execute the SQL query to fetch all rows from the 'users' table
