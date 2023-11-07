@@ -1,3 +1,6 @@
+import json
+from sqlite3 import connect
+import sqlite3
 from flask import Flask, request, jsonify, session
 from flask_bcrypt import Bcrypt
 from flask_cors import CORS, cross_origin
@@ -103,6 +106,31 @@ def login_user():
 
 #     return jsonify({"message": "essage sent successfully", "user_email": user_email, "message_text": message_text})
 
+@cross_origin()
+@app.route("/all", methods=["GET"])
+def all_from_db():
+    try:
+        # Connect to the SQLite database
+        conn = sqlite3.connect("sqlite:///./db.sqlite")
+        cursor = conn.cursor()
+
+        # Execute the SQL query to fetch all rows from the 'users' table
+        cursor.execute("SELECT * FROM users")
+        raw_users = cursor.fetchall()
+
+        # Convert the rows to a dictionary
+        users = {}
+        for raw_user in raw_users:
+            users[raw_user[0]] = json.loads(raw_user[1])
+
+        # Close the database connection (using a context manager)
+        conn.close()
+
+        return jsonify(users)
+    except Exception as e:
+        return jsonify({"error": str(e)})
+    
+
 
 # Contact form and send emails with Flask for support or feedback
 @cross_origin
@@ -110,11 +138,10 @@ def login_user():
 def contact():
     name = request.form.get("name")
     email = request.form.get("email")
-    phone = request.form.get("phone")
     message = request.form.get("message")
 
     subject = f"Mail from {name}"
-    body = f"Name: {name}\nE-mail: {email}\nPhone: {phone}\n\n\n{message}"
+    body = f"Name: {name}\nE-mail: {email}\n{message}"
     sender = app.config["MAIL_USERNAME"]
     recipients = ["ekibet544@gmail.com"]
 
