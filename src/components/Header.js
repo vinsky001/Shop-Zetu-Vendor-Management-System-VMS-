@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
 import SigninForm from "./signinform";
-import { ShopZetuDemoUrl } from "../data/db";
 
 export default function Header() {
   const noRef = null;
-  
+
   return (
     <header className="header flex-grow-0">
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <Link className="navbar-brand text-bold" to="/">
+          <a className="navbar-brand text-bold" href="./">
             ShopZetu
-          </Link>
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -26,24 +24,24 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <a className="nav-link active" aria-current="page" href="./">
                   Home
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={ShopZetuDemoUrl} target="_blank" rel="noreferrer">
+                <a className="nav-link" href="./">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/brands">
+                <a className="nav-link" href="./">
                   Brands
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/dashboard">
+                <a className="nav-link" href="./">
                   My Dashboard
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
                 <a
@@ -57,12 +55,12 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <a className="nav-link" href="./">
                   Contact Us
-                </Link>
+                </a>
               </li>
               <li>
-                <span class="slider"></span>
+                <span className="slider"></span>
               </li>
             </ul>
             <button

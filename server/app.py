@@ -9,6 +9,8 @@ from config import ApplicationConfig
 from models import db, User
 from flask_mail import Mail, Message
 import smtplib
+from models import register_user, login_user
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
@@ -29,6 +31,7 @@ CORS(app, supports_credentials=True)
 mail = Mail(app)
 server_session = Session(app)
 db.init_app(app)
+migrate = Migrate(app, db)
 
 with app.app_context():
     db.create_all()
@@ -51,6 +54,8 @@ def get_current_user():
 @cross_origin
 @app.route("/register", methods=["POST"])
 def register_user():
+    firstname = request.json["firstname"]
+    lastname = request.json["lastname"]
     email = request.json["email"]
     password = request.json["password"]
 
@@ -60,7 +65,7 @@ def register_user():
         return jsonify({"error": "User already exists!"}), 409
 
     hashed_password = bcrypt.generate_password_hash(password)
-    new_user = User(email=email, password=hashed_password)
+    new_user = User(firstname=firstname, lastname=lastname, email=email, password=hashed_password)
     db.session.add(new_user)
     db.session.commit()
 
@@ -96,6 +101,8 @@ def login_user():
 #     if not user_id:
 #         return jsonify({"error": "Unauthorized"}), 401
 
+
+
 #     message_text = request.json["message_text"]
 #     user_email = request.json["user_email"]
 
@@ -105,6 +112,7 @@ def login_user():
 #     db.session.commit()
 
 #     return jsonify({"message": "essage sent successfully", "user_email": user_email, "message_text": message_text})
+
 
 @cross_origin()
 @app.route("/all", methods=["GET"])
