@@ -94,26 +94,6 @@ def login_user():
     return jsonify({"id": user.id, "email": user.email})
 
 
-# @app.route("/send_message", methods=["POST"])
-# def send_message():
-#     user_id = session.get("user_id")
-
-#     if not user_id:
-#         return jsonify({"error": "Unauthorized"}), 401
-
-
-
-#     message_text = request.json["message_text"]
-#     user_email = request.json["user_email"]
-
-#     # Create a new message and save it to the database
-#     new_message = Message(sender_id=user_id, message=message_text)
-#     db.session.add(new_message)
-#     db.session.commit()
-
-#     return jsonify({"message": "essage sent successfully", "user_email": user_email, "message_text": message_text})
-
-
 @cross_origin()
 @app.route("/all", methods=["GET"])
 def all_from_db():
