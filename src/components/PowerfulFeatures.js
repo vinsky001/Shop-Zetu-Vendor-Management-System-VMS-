@@ -19,11 +19,11 @@ export default function PowerfulFeatures() {
             <div class="p-4">
               <img src={cloud} alt="Cloud" className="mb-3" />
               <h4>
-                Vendor Database
+                Retail Operations
                 <br />
                 Management
               </h4>
-              <p>Centralize vendor info for easy access</p>
+              <p>Optimize your inventory, reduce handling cost, and deliver products to your customers</p>
             </div>
           </div>
           <div class="col-12 col-md-4 p-2">
@@ -41,11 +41,11 @@ export default function PowerfulFeatures() {
             <div class="p-4">
               <img src={diversity} alt="Users" className="mb-3" />
               <h4>
-                Collaborative Product
+              E-Commerce
                 <br />
-                Design
+                
               </h4>
-              <p>Team up on product creation</p>
+              <p>Integrate with e-commerce platforms, enable retailers to get product information seamlessly.</p>
             </div>
           </div>
         </div>
